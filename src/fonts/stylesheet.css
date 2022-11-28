@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('TitilliumWeb-Regular.eot');
+    src: url('TitilliumWeb-Regular.eot?#iefix') format('embedded-opentype'),
+        url('TitilliumWeb-Regular.woff2') format('woff2'),
+        url('TitilliumWeb-Regular.woff') format('woff'),
+        url('TitilliumWeb-Regular.ttf') format('truetype'),
+        url('TitilliumWeb-Regular.svg#TitilliumWeb-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('TitilliumWeb-BoldItalic.eot');
+    src: url('TitilliumWeb-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('TitilliumWeb-BoldItalic.woff2') format('woff2'),
+        url('TitilliumWeb-BoldItalic.woff') format('woff'),
+        url('TitilliumWeb-BoldItalic.ttf') format('truetype'),
+        url('TitilliumWeb-BoldItalic.svg#TitilliumWeb-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('TitilliumWeb-LightItalic.eot');
+    src: url('TitilliumWeb-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('TitilliumWeb-LightItalic.woff2') format('woff2'),
+        url('TitilliumWeb-LightItalic.woff') format('woff'),
+        url('TitilliumWeb-LightItalic.ttf') format('truetype'),
+        url('TitilliumWeb-LightItalic.svg#TitilliumWeb-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('TitilliumWeb-SemiBoldItalic.eot');
+    src: url('TitilliumWeb-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('TitilliumWeb-SemiBoldItalic.woff2') format('woff2'),
+        url('TitilliumWeb-SemiBoldItalic.woff') format('woff'),
+        url('TitilliumWeb-SemiBoldItalic.ttf') format('truetype'),
+        url('TitilliumWeb-SemiBoldItalic.svg#TitilliumWeb-SemiBoldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('TitilliumWeb-Italic.eot');
+    src: url('TitilliumWeb-Italic.eot?#iefix') format('embedded-opentype'),
+        url('TitilliumWeb-Italic.woff2') format('woff2'),
+        url('TitilliumWeb-Italic.woff') format('woff'),
+        url('TitilliumWeb-Italic.ttf') format('truetype'),
+        url('TitilliumWeb-Italic.svg#TitilliumWeb-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('TitilliumWeb-Black.eot');
+    src: url('TitilliumWeb-Black.eot?#iefix') format('embedded-opentype'),
+        url('TitilliumWeb-Black.woff2') format('woff2'),
+        url('TitilliumWeb-Black.woff') format('woff'),
+        url('TitilliumWeb-Black.ttf') format('truetype'),
+        url('TitilliumWeb-Black.svg#TitilliumWeb-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('TitilliumWeb-SemiBold.eot');
+    src: url('TitilliumWeb-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('TitilliumWeb-SemiBold.woff2') format('woff2'),
+        url('TitilliumWeb-SemiBold.woff') format('woff'),
+        url('TitilliumWeb-SemiBold.ttf') format('truetype'),
+        url('TitilliumWeb-SemiBold.svg#TitilliumWeb-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('TitilliumWeb-Light.eot');
+    src: url('TitilliumWeb-Light.eot?#iefix') format('embedded-opentype'),
+        url('TitilliumWeb-Light.woff2') format('woff2'),
+        url('TitilliumWeb-Light.woff') format('woff'),
+        url('TitilliumWeb-Light.ttf') format('truetype'),
+        url('TitilliumWeb-Light.svg#TitilliumWeb-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('TitilliumWeb-Bold.eot');
+    src: url('TitilliumWeb-Bold.eot?#iefix') format('embedded-opentype'),
+        url('TitilliumWeb-Bold.woff2') format('woff2'),
+        url('TitilliumWeb-Bold.woff') format('woff'),
+        url('TitilliumWeb-Bold.ttf') format('truetype'),
+        url('TitilliumWeb-Bold.svg#TitilliumWeb-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('TitilliumWeb-ExtraLight.eot');
+    src: url('TitilliumWeb-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('TitilliumWeb-ExtraLight.woff2') format('woff2'),
+        url('TitilliumWeb-ExtraLight.woff') format('woff'),
+        url('TitilliumWeb-ExtraLight.ttf') format('truetype'),
+        url('TitilliumWeb-ExtraLight.svg#TitilliumWeb-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('TitilliumWeb-ExtraLightItalic.eot');
+    src: url('TitilliumWeb-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('TitilliumWeb-ExtraLightItalic.woff2') format('woff2'),
+        url('TitilliumWeb-ExtraLightItalic.woff') format('woff'),
+        url('TitilliumWeb-ExtraLightItalic.ttf') format('truetype'),
+        url('TitilliumWeb-ExtraLightItalic.svg#TitilliumWeb-ExtraLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
