@@ -1,0 +1,87 @@
+
+.profileBackground {
+    background-color: #F6F0F0;
+}
+.pageName {
+    width: 100vw;
+    height: 45px;
+    background-color: rgba(12, 48, 16, 0.2);
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    align-items: center;
+}
+.arrowButton {
+    width: 24px;
+    height: 24px;
+    margin: 10px 10px;
+    border: none;
+    background-color: rgba(12, 48, 16, 0);
+}
+.pageNameText {
+    font-family: "Titillium Web", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 45px;
+    color: #0C3010;
+}
+.profileInfo {
+    margin: 17px 0px;
+    display: flex;
+    align-items: center;
+}
+.profileNameInfo {
+    margin: 25px 20px;
+}
+.profileText {
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0C3010;
+}
+.profileLinks {
+    margin: 30px 10px;
+    height: 100vh;
+}
+.profileLink {
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+}
+.linkImage {
+    width: 50px;
+    height: 50px;
+    padding: 4px 10px;
+    margin-right: 5px;
+    background-color: #C7CAC3;
+    border-radius: 2px;
+}
+.linkText {
+    text-decoration: none;
+    color: #0C3010;
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+.menu {
+    width: 100vw;
+    padding: 11px 7px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+}
+.menuText {
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #0C3010;
+}

@@ -3,7 +3,7 @@ import classes from './Proceed.module.css'
 
 function Proceed() {
   return (
-    <div>Proceed</div>
+      <div>Proceed</div>
   )
 }
 

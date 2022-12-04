@@ -3,7 +3,11 @@ import classes from './Poisk.module.css'
 
 function Poisk() {
   return (
-    <div>Poisk</div>
+    <div className={classes.searchPage}>
+      <div className={classes.search}>
+        <input className={classes.searchInput} type="search" placeholder="Search"/>
+      </div>
+    </div>
   )
 }
 
