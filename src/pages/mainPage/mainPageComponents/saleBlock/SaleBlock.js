@@ -5,7 +5,9 @@ import classes from './SaleBlock.module.css'
 function SaleBlock() {
     
   return (
-    <div>SaleBlock</div>
+    <div>
+      
+    </div>
   )
   
 }
