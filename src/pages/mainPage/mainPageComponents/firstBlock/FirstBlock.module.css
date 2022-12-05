@@ -1,0 +1,120 @@
+.FirstBlock{
+    height: 706px;
+    padding-top: 24px;
+    background: url("./imgFirstBlock/backgound.jpg") no-repeat center;
+    background-size: cover;
+}
+.container{
+    padding-left: 80px;
+    padding-right: 85px;
+}
+.h2Node{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 137px;
+    color: #F6F0F0;
+}
+.pNode{
+    width: 532px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    color: #F6F0F0;
+}
+.button{
+    margin-top: 55px;
+    width: 200px;
+    height: 60px;
+    background: #F6F0F0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 38px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 60px;
+    color: #0C3010;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+.button:hover{
+    background: #0C3010;
+    color: #FFFFFF;
+}
+.h3Node{
+    display: none;
+
+}
+.pMNode{
+    display: none;
+}
+@media (max-width: 400px) {
+    .FirstBlock{
+        height: 488px;
+        padding-top: 37px;
+        padding-bottom: 54px;
+        background: url("./imgFirstBlock/mobilka.jpg") no-repeat center ;
+        background-size: cover;
+    }
+    .h2Node{
+        display: none;
+    }
+    .pNode{
+        display: none;
+    }
+    .container{
+        height: 100%;
+        padding-left: 28px;
+        padding-right: 29px;
+        display: flex;
+        justify-content:space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    .h3Node{
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Baloo Tammudu 2';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 60px;
+        text-decoration-line: underline;
+        color: #000000;
+    }
+    .pMNode{
+        margin-top: 10px;
+        display: block;
+        font-family: 'Titillium Web';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+        color: #000000;
+    }
+    .button{
+        width: 184px;
+        height: 60px;
+        background: #0C3010;
+        border: 1px solid #EEDEDE;
+        font-family: 'Titillium Web';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 60px;
+        color: #FFFFFF;
+        text-transform: none;
+    }
+    .button:hover{
+        background: #F6F0F0;
+        color: #0C3010;
+    }
+}
