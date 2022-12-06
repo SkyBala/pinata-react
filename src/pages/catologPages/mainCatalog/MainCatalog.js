@@ -4,7 +4,7 @@ import classes from './MainCatalog.module.css'
 
 function MainCatalog() {
   return (
-    <div>MainCatalog</div>
+    <div>MainCatalog fib </div>
   )
 }
 
