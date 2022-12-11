@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 11px 7px;
+}
+
+.mobileHeader {
+    position: fixed;
+    width: 400px;
+    bottom: 0px;
+}
+
+.mobileHeader_inner {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobileHeader_inner a {
+    text-decoration: none;
+}
+
+.text {
+    height: 21px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #0C3010;
+}
