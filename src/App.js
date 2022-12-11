@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+      <Main/>
         <Routes>
           <Route path='MainPage' element={<MainPage/>}/>
           <Route path='Log' element={<FormLog/>}/>
@@ -22,7 +23,7 @@ function App() {
           <Route path='IndoorPage' element={<IndoorPage/>}/>
         </Routes>
       </BrowserRouter>
-      <Main/>
+      
     </div>
   );
 }
