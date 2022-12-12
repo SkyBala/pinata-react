@@ -10,7 +10,7 @@
 
 .mobileHeader {
     position: fixed;
-    width: 400px;
+    width: 100%;
     bottom: 0px;
 }
 
