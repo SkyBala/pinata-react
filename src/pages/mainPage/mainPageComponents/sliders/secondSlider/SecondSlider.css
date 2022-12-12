@@ -1,0 +1,46 @@
+.content {
+    width: 100%;
+    background-color:#F6F0F0;
+    
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    background-image: url(./imgSecondSlider/background_flower.png);
+    background-position-x:70px;
+    background-position-y: -9px;
+    background-size: 1235px;
+    background-repeat: no-repeat;
+}
+.block1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.content_block {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.block_title > h1 {
+    width: 164px;
+    height: 61px;
+    margin: 0 auto;
+    padding-top: 57px;
+}
+
+.arrow_left {
+    width: 25px;
+    height: 88px;
+    margin: 206px 65px 0px 0px;
+}
+
+.arrow_right {
+    width: 25px;
+    height: 88px;
+    margin: 205px 0px 0px 65px;
+}
+
