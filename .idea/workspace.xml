@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ed3eb7b-af83-4857-83a6-c67bdf3fd66e" name="Changes" comment="" />
+    <list default="true" id="6ed3eb7b-af83-4857-83a6-c67bdf3fd66e" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/src/pages/mainPage/mainPageComponents/firstBlock/imgFirstBlock/backgound.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/mainPage/mainPageComponents/firstBlock/imgFirstBlock/mobilka.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/mainPage/mainPageComponents/saleBlock/imgSaleBLock/back.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/mainPage/mainPageComponents/saleBlock/imgSaleBLock/mobilkaSale.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/mainPage/mainPageComponents/firstBlock/FirstBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/mainPage/mainPageComponents/firstBlock/FirstBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/mainPage/mainPageComponents/firstBlock/FirstBlock.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/mainPage/mainPageComponents/firstBlock/FirstBlock.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/mainPage/mainPageComponents/saleBlock/SaleBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/mainPage/mainPageComponents/saleBlock/SaleBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/mainPage/mainPageComponents/saleBlock/SaleBlock.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/mainPage/mainPageComponents/saleBlock/SaleBlock.module.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +20,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -18,15 +37,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\final_project\Final_project\src\pages\mainPage\mainPageComponents\saleBlock\imgSaleBLock" />
+      <recent name="C:\Users\user\Desktop\final_project\Final_project\src\pages\mainPage\mainPageComponents\firstBlock\imgFirstBlock" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -38,10 +65,25 @@
       <workItem from="1669646165059" duration="4000" />
       <workItem from="1669732340584" duration="3000" />
       <workItem from="1669830812865" duration="48000" />
+      <workItem from="1670153030009" duration="549000" />
+      <workItem from="1670236084834" duration="5000" />
+      <workItem from="1670236230672" duration="12000" />
+      <workItem from="1670236267179" duration="9628000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
