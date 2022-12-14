@@ -1,0 +1,33 @@
+.IndoorInner{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.pageTitle{
+    font-size: 50px;
+    font-weight: 300;
+    color: #0C3010;
+    padding-bottom: 4%;
+}
+.cardsBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    color: #0C3010;
+    max-width: 24%;
+}
+.card span{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    font-weight: 400px;
+    font-size: 24px;
+}

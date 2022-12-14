@@ -1,0 +1,62 @@
+*{
+    margin:0 ;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.buttonPost{
+    padding:  0;
+    height: 505px;
+    width: 250px;
+    border: none;
+    margin-bottom:35px;
+    
+}
+
+
+.block{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block_info{
+    margin-top: 15px;
+    width: 250px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+   
+    color: #0C3010;
+    margin-bottom: 10px;
+}
+
+
+
+
+.size_container{
+    display: flex;
+    justify-content: right;
+    width: 250px;
+    align-items: center;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #0C3010;
+}
+
+.circles{
+    
+    display: flex;
+
+}
+
+.circlesColors{
+    margin-right: 10px;
+
+}

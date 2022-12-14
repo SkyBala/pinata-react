@@ -1,0 +1,70 @@
+.body{
+    background: #F5F5F5 1280px;
+}
+.container{
+    
+    width: 1280px;
+    margin: 0 auto;
+    
+}
+.AboutUsItems{
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-between;
+}
+.AboutUsItem{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AboutUsFirstPart{
+    margin: 0,auto,auto,0;
+    justify-content: space-around;
+    width: 715px;
+    height: 445px;
+    left: 0px;
+    top: 1px;
+}
+/* .AboutUsSecondPart{
+    margin-left: 40px;
+} */
+
+
+.AboutUsSecondPart h2{
+    color: #0C3010;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 65px;
+    margin-left: -280px;
+}
+.AboutUsSecondPart p{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    color: #0C3010;
+    padding: auto;
+    margin-left: 40px;
+    text-decoration: none;
+    text-align: justify;
+}
+.AboutUsSecondPart button{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 45px;
+    color: #F7F0F0;
+    width: 200px;
+    height: 60px;
+    left: 739px;
+    top: 386px;
+    background: #0C3010;
+    border-radius: 38px;
+    margin-left: -240px;
+    margin-top: 25px;
+}
