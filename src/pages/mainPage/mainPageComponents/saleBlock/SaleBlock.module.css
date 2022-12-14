@@ -1,0 +1,75 @@
+.SaleBlock{
+    height: 607px;
+    padding-top: 70px;
+    background: url("./imgSaleBLock/back.jpg") no-repeat center;
+    background-size: cover;
+}
+.container{
+    padding-left: 80px;
+    padding-right: 85px;
+}
+.h2Node{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 91px;
+    color: #F6F0F0;
+}
+.line{
+    margin-top: 20px;
+    margin-bottom: 34px;
+    width: 395.03px;
+    height: 20px;
+    background: #02780F;
+}
+.pNode{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 46px;
+    color: #F6F0F0;
+}
+.pNode2{
+    display: none;
+}
+@media (max-width: 400px) {
+    .SaleBlock{
+        height: 220px;
+        background: url("./imgSaleBLock/mobilkaSale.jpg") no-repeat center;
+        background-size: cover;
+        padding-top: 22px;
+    }
+    .container{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .h2Node{
+        font-family: 'Titillium Web';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: #000000;
+    }
+    .line{
+        width: 152px;
+        height: 10px;
+        margin-top: 10px;
+        margin-bottom: 21px;
+    }
+    .pNode2{
+        display: block;
+        font-family: 'Titillium Web';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #000000;
+    }
+    .pNode{
+        display: none;
+    }
+
+}
