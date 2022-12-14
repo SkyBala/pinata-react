@@ -6,7 +6,8 @@ import img from './imgAboutUs/flowers.png'
 function AboutUs() {
     
   return (
-    <div className={classes.AboutUs}>
+    <div style={{background:'#F6F0F0'}}>
+      <div className={classes.AboutUs}>
       <div className={classes.container}>
         <div className={classes.AboutUsInner}>
           <div className={classes.AboutUsItems}>
@@ -24,6 +25,7 @@ Most indoor <br/> plants you buy from a box store or other retailer spend 3–4 
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 
