@@ -1,0 +1,35 @@
+.mainCatalog{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+.title{
+    font-weight: 700;
+    font-size: 40px;
+    padding-bottom: 5%;
+}
+.cardsBox{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 30%;
+    padding-bottom: 5%;
+    text-decoration: none;
+    color: inherit;
+}
+.cardText{
+    padding-top: 4%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    white-space: nowrap;
+}

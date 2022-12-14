@@ -1,0 +1,30 @@
+.news{
+    padding-top: 30px;
+    position: relative;
+    padding-bottom: 20%;
+}
+.news__title{
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.catalogs{
+    margin: 6px 0 32px;
+    font-size: 14px;
+    display: block;
+    text-align: end;
+    transform: translateX(-23px);
+}
+.catalogs:after{
+    padding-bottom: 3px;
+    padding-right: 3px;
+    content: url('../imgMobileCatalog/arrow-left.svg');
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.navLink{
+    text-decoration: none;
+    color: inherit;
+}

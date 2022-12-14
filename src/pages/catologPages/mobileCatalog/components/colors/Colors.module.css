@@ -1,0 +1,12 @@
+.colors{
+    display: flex;
+    align-items: center;
+}
+.colors__item{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.colors__item + .colors__item{
+    margin-left: 2px;
+}
