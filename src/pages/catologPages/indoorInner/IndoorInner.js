@@ -6,10 +6,17 @@ import img3 from './imgIndoorInner/indoorInnerImg3.jpg'
 import { useMediaQuery } from '@mui/material'
 
 
+
 function IndoorInner() {
   const isMobile = useMediaQuery('(min-width:401px)');
   
   return (
+<<<<<<< HEAD
+    <>
+    
+    </>
+  );
+=======
    <>
     {
     isMobile?
@@ -44,6 +51,8 @@ function IndoorInner() {
     
    </>
   )
+>>>>>>> 6ab9ff3b17d86dfe099c27599483ae08b9b93a5b
 }
+
 
 export default IndoorInner
