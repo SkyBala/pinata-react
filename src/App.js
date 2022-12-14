@@ -23,9 +23,10 @@ function App() {
           <Route path='IndoorPage' element={<IndoorPage/>}/>
         </Routes>
       </BrowserRouter>
-     
     </div>
+
   );
+
 }
 
 export default App;

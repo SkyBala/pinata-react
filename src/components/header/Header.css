@@ -1,0 +1,11 @@
+.container{
+    width: 1280px;
+    margin: 0 auto;
+}
+ul,li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
