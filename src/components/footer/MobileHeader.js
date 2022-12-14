@@ -10,6 +10,7 @@ import profile from "./imgMobileHeader/profile.svg";
 
 
 function MobileHeader() {
+
     return (
         <div className={classes.mobileHeader}>
             <div className={classes.container}>

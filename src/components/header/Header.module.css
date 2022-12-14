@@ -28,8 +28,9 @@
 .header_modal{
     height: 320px;
     width: 100%;
+    position: absolute;
+    z-index: 100;
     background-color: #EEDEDE;
-
 }
 .header_container{
     width: 500px;
@@ -45,3 +46,4 @@
     font-size: 20px;
     font-weight: 400;
 }
+

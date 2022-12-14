@@ -10,9 +10,11 @@
 }
 
 .footer {
-    min-height: 100vh;
+    
     background-color: #AEA685;
     background-size: cover;
+    padding-top: 62px ;
+    padding-bottom: 120px;
 }
 
 .footer_inner {
@@ -20,7 +22,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 62px 0px 126px;
+  
     background-color: #AEA685;
     background-size: cover;
 }
@@ -43,7 +45,6 @@
 
 .join {
     width: 645px;
-    height: 98px;
     font-size: 24px;
     text-align: center;
 }
