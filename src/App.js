@@ -25,21 +25,24 @@ function App() {
       
         
         <Routes>
+        
             <Route path='/' element={<Layout/>}>
-                <Route path='Log' element={<FormLog/>}/>
+           
+                <Route index element={<FormLog/>}/>
                 
                 <Route path='SignUp' element={<FormSignUp/>}/>
                 <Route path='*' element={<DefaultPage/>}/>
                 {/* <Route path='IndoorPage' element={<IndoorPage/>}/> */}
                 {/* <Route path='MobileMainCatalog' element={<MobileMainCatalog/>}/> */}
                 
-                {isMobile?<Route path='MainPage' element={<News/>}/>
-                  :<Route path='MainPage' element={<MainCatalog/>}/>}
+                {/* {isMobile?<Route path='MainPage' element={<News/>}/>
+                  :<Route path='MainPage' element={<MainCatalog/>}/>} */}
 
-                {isMobile?<Route path='MainPage/IndoorPage' element={<MobileCatalog/>}/>
-                  :<Route path='MainPage/IndoorPage' element={<IndoorPage/>}/>}
+                {/* {isMobile?<Route path='MainPage/IndoorPage' element={<MobileCatalog/>}/>
+                  :<Route path='MainPage/IndoorPage' element={<IndoorPage/>}/>} */}
 
-                {isMobile?<Route path='MainPage/MobileMainCatalog' element={<MobileMainCatalog/>} />:null}
+                {/* {isMobile?<Route path='MainPage/MobileMainCatalog' element={<MobileMainCatalog/>} />:null} */}
+
             </Route>
           </Routes>
        

@@ -21,8 +21,7 @@ const CatalogPost = (props) => {
                     <div className={classes.circlesColors} style={{borderRadius:"50%" , width:"30px" ,height:"30px" , backgroundColor:props.post.color}}></div>
                     <div className={classes.circlesColors} style={{borderRadius:"50%" , width:"30px" ,height:"30px" , backgroundColor:props.post.color}}></div>
                     <div className={classes.circlesColors} style={{borderRadius:"50%" , width:"30px" ,height:"30px" , backgroundColor:props.post.color}}></div>
-                    <div className={classes.circlesColors} style={{borderRadius:"50%" , width:"30px" ,height:"30px" , backgroundColor:props.post.color}}></div>
-                    
+                    <div className={classes.circlesColors} style={{borderRadius:"50%" , width:"30px" ,height:"30px" , backgroundColor:props.post.color}}></div>   
                 </div> 
             </div>
             

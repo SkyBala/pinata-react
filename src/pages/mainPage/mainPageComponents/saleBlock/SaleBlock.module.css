@@ -3,10 +3,12 @@
     padding-top: 70px;
     background: url("./imgSaleBLock/back.jpg") no-repeat center;
     background-size: cover;
+    margin-bottom: 50px;
 }
 .container{
     padding-left: 80px;
     padding-right: 85px;
+    
 }
 .h2Node{
     font-family: 'Titillium Web';

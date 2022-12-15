@@ -15,6 +15,7 @@ import img3 from './imgfirstSilder/img3.png'
 const Carousel = () => {
     const swiperRef = useRef();
 }
+
 const FirstSlider = () => {
     return (
         <div className=" container  justify-content-center bg-cream slider-scroll-x" style={{minWidth: ''}}>

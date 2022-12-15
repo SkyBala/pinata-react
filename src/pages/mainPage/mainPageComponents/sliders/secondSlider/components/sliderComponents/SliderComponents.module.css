@@ -4,13 +4,12 @@
     width: 300px;
     height: 400px;
     background-color: #fff;
-    margin: 50px 0px ;
 }
 
 .img_stars {
     width: 22px;
     height: 22px;
-    margin: 50px 95px 17px;
+    margin: 0 auto;
 }
 
 .texts {
@@ -34,4 +33,21 @@
     height: 48px;
     text-align: center;
     margin: 15px 70px 76px;
+}
+
+
+/* mobile */
+
+.mobBLock{
+    width: 200px;
+    height: 267px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
+
+.textsT{
+    width: 192px;
 }

@@ -33,3 +33,7 @@
     font-weight: 400;
     white-space: nowrap;
 }
+.cardImg{
+    width: 250px;
+    height: 400px;
+}

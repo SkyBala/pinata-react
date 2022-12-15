@@ -8,14 +8,21 @@ import NewArrivals from './imgMainCatalog/New-Arrivals.jpg'
 import PetFriendlyPlants from './imgMainCatalog/Pet-Friendly-Plants.jpg'
 
 import {Link, NavLink} from "react-router-dom";
+import { useMediaQuery } from '@mui/material'
+import MobileMainCatalog from '../mobileMainCatalog/MobileMainCatalog'
 
 
 
 
 
 function MainCatalog() {
+  const isMobile = useMediaQuery('(min-width:401px)');
+
   return (
-      <div  className={classes.mainCatalog}>
+      <>
+      {
+        isMobile?
+        <div  className={classes.mainCatalog}>
         <h1 className={classes.title}>CATALOGS</h1>
         <div className={classes.cardsBox}>
           <NavLink 
@@ -54,7 +61,9 @@ function MainCatalog() {
           </div>
 
         </div>
-      </div>
+      </div>:<MobileMainCatalog/>
+      }
+      </>
   )
 }
 

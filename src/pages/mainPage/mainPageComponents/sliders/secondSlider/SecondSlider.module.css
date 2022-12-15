@@ -1,17 +1,18 @@
 .content {
     width: 100%;
     background-color:#F6F0F0;
-    
-}
-
-.container {
-    max-width: 1300px;
-    margin: 0 auto;
+    padding-bottom: 153px;
     background-image: url(./imgSecondSlider/background_flower.png);
     background-position-x:70px;
     background-position-y: -9px;
     background-size: 1235px;
     background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+   
 }
 .block1{
     display: flex;
@@ -21,26 +22,46 @@
 .content_block {
     width: 90%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
 
 .block_title > h1 {
     width: 164px;
     height: 61px;
-    margin: 0 auto;
-    padding-top: 57px;
+    margin: 50px auto;
+   
 }
 
 .arrow_left {
     width: 25px;
     height: 88px;
     margin: 206px 65px 0px 0px;
+    cursor: pointer;
 }
 
 .arrow_right {
+    cursor: pointer;
     width: 25px;
     height: 88px;
     margin: 205px 0px 0px 65px;
 }
 
+
+/* mobile */
+.mobCont{
+    padding-left: 10px;
+    padding: 65px 0 160px 10px;
+    background-color:#F6F0F0;
+}
+.mobCont  h1 {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+
+    color: #000000;
+    margin-bottom: 42px;
+
+}

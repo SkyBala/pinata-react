@@ -1,4 +1,5 @@
 import React from 'react'
+
 import classes from './SaleBlock.module.css'
 
 
@@ -12,6 +13,7 @@ function SaleBlock() {
           <p className={classes.pNode}> This weekend only, save 20% on plants with code EARTH20. <br/> Get an additional $25 credit when you spend $150 or more.</p>
           <p className={classes.pNode2}>This weekend only, save 20% on  <br/>  plants with </p>
       </div>
+      
     </div>
   )
   
