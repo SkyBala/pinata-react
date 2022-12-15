@@ -1,18 +1,18 @@
 import React from "react";
-import {types} from "../types";
+import { types } from "../types";
 
 const InitialState = {
     count: 0 ,
 }
 
-export function busketReducer (state = InitialState, action){
+export function buskedReducer (state = InitialState, action){
 switch (action.type) {
-    case "BUSKET_INC":
+    case "BUSKED_INC":
         return{...state, count:state.count + 1}
         break;
-        case "BUSKET_DEC":
+        case "BUSKED_DEC":
             if(state.count <= 0){
-                return{...state, count:0}
+                return{...state, count: 0}
             }else{
             return{...state, count:state.count - 1}
             }

@@ -3,7 +3,7 @@ import React from 'react'
 import Button  from '@mui/material/Button';
 import Xray from "../img/x.svg";
 
- function BusketModal ({closeModal}) {
+ function BuskedModal ({closeModal}) {
 
   return (
     <Box 
@@ -121,4 +121,4 @@ import Xray from "../img/x.svg";
     </Box>
   )
 }
-export default BusketModal;
+export default BuskedModal;
