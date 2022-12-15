@@ -17,7 +17,7 @@ const News = () => {
       </NavLink>
 
       <NewsCardsWrapper/>
-    </div>
+    </div>  
   )
 }
 

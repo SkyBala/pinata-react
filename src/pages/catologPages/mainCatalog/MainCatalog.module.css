@@ -20,6 +20,7 @@
 .card{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     flex-direction: column;
     width: 322.5px;
