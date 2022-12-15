@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 import classes from "./FormSignUp.module.css";
 import imgLog from "./imgFormSignUp/formCol.png";
 import arrowLeft from "./imgFormSignUp/arrowLeft.svg";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { sendForm } from "../../../redux/actions/regisReduserAction";
 
 function FormSignUp() {
   const [email, setEmail] = useState("");
@@ -10,9 +13,11 @@ function FormSignUp() {
   const [emailDirty, setEmailDirty] = useState(false);
   const [passworDirty, setPassworDirty] = useState(false);
   const [emailError, setemailError] = useState("Email не может быть пустым");
+
   const [passwordError, setpasswordError] = useState(
     "Password не может быть пустым"
   );
+
   const [formValid, setFormValid] = useState(false);
 
   useEffect(() => {
@@ -22,9 +27,10 @@ function FormSignUp() {
       setFormValid(true);
     }
   }, [emailError, passwordError]);
-
+  
   const emailHandler = (e) => {
     setEmail(e.target.value);
+
     const re =
       /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if (!re.test(String(e.target.value).toLowerCase())) {
@@ -36,10 +42,10 @@ function FormSignUp() {
 
   const passwordHandler = (e) => {
     setpasswordError(e.target.value);
-    if (e.target.value.length < 3 || e.target.value.length > 8) {
-      setpasswordError("Пароль должен быть длинее 3 и меньше 8");
+    if (e.target.value.length < 8) {
+      setpasswordError("Пароль должен быть длинее 8");
       if (!e.target.value) {
-        setpasswordError("Пароль должен быть длинее 3 и меньше 8");
+        setpasswordError("Пароль должен быть длинее 8");
       }
     } else {
       setpasswordError("");
@@ -55,8 +61,23 @@ function FormSignUp() {
         setPassworDirty(true);
         break;
     }
-  };
 
+  };
+  const {signIn} =useSelector(state=>state.regisReduserAction)
+  const form = useRef()
+  const dispatch = useDispatch()
+  const navigate= useNavigate()
+  const handleSend=()=>{
+        dispatch(sendForm(form.current))
+       setTimeout(()=>{
+        if(signIn===true){
+          navigate('/')
+        }
+       },5000)
+       
+  }
+  console.log(signIn);
+  
   return (
     <div className={classes.formSignUpPage}>
       <div className={classes.aroowLeft}>
@@ -68,7 +89,7 @@ function FormSignUp() {
       <div className={classes.container}>
         <div className={classes.forma}>
           <div className={classes.inner_form}>
-            <form action="URL">
+            <form action="/logIn" ref={form} >
               <h1>Sign Ap</h1>
               <div className={classes.input_win}>
                 <h4>EMAIL ADDRESS</h4>
@@ -107,22 +128,25 @@ function FormSignUp() {
               <div className={classes.input_win}>
                 <h4>CONFIRM PASSWORD</h4>
                 <input
-                  name="password_conf"
+                  name="password2"
                   type="password"
                   placeholder="Enter your confirm password..."
                 />
               </div>
             </form>
+
             <div className={classes.buttons}>
-              <button disabled={!formValid} className={classes.button}>
-                <p className={classes.button}>Sign Up</p>
+           
+            <button onClick={handleSend} disabled={!formValid} className={classes.button} >
+                Sign Up
               </button>
+
             </div>
           </div>
         </div>
       </div>
       <div className={classes.bottomText}>
-        <p>I already have an account. Log in</p>
+        <p>I already have an account.<Link to='/logIn'>Log in</Link></p>
       </div>
       <div className={classes.imgForm}>
         <img src={imgLog} alt="imgForm" />

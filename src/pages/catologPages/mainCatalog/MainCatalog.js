@@ -6,10 +6,9 @@ import outdoorPlantsImg from './imgMainCatalog/Outdoor-plants.jpg'
 import LowMaintenancePlants from './imgMainCatalog/Low-Maintenance-Plants.jpg'
 import NewArrivals from './imgMainCatalog/New-Arrivals.jpg'
 import PetFriendlyPlants from './imgMainCatalog/Pet-Friendly-Plants.jpg'
-
 import {Link, NavLink} from "react-router-dom";
 import { useMediaQuery } from '@mui/material'
-import MobileMainCatalog from '../mobileMainCatalog/MobileMainCatalog'
+import News from '../mobileCatalog/news/News'
 
 
 
@@ -61,7 +60,7 @@ function MainCatalog() {
           </div>
 
         </div>
-      </div>:<MobileMainCatalog/>
+      </div>:<News/>
       }
       </>
   )

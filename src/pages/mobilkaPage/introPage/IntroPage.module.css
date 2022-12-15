@@ -1,9 +1,8 @@
 @media (max-width: 425px) {
     .wrap{
-        min-height: 100vh;
-        width: 100%;
-
+        height: 100vh;
         background: url(./../../../img/flowers.png) center/cover no-repeat ;
+        height: 100vh;
     }
     .btn{
         width: 162px;
@@ -28,7 +27,7 @@
         flex-direction: column;
         align-items: center;
         row-gap: 25px;
-        margin-top: 90%;
+        margin-top: 20vh;
     }
     .pianta{
         position: absolute;
@@ -84,7 +83,7 @@
     .animation{
         background-color: #ffffff;
         z-index: 2;
-        min-height: 100vh;
+        height: 100vh;
         width: 100%;
         position:absolute;
         top: 0;

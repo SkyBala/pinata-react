@@ -19,7 +19,7 @@ function MainPage() {
       <SaleBlock />
       <Line/>
       <FirstSlider/>
-      <MainCatalog/>/
+      <MainCatalog/>
       <SecondSlider/>
     </div>
   )

@@ -3,6 +3,7 @@ import classes from './IntroPage.module.css'
 import logo from './../../../img/logo.png'
 import pianta from './../../../img/PIANTA.png'
 import list from './../../../img/list.png'
+import { Link } from 'react-router-dom'
 
 
 
@@ -26,12 +27,17 @@ function IntroPage() {
             <img className={classes.logo} src={logo} alt="" />
           </div>
           <div className={classes.bottom}>
-            <button  className={classes.btn}>
+           <Link to='signUp'>
+           <button  className={classes.btn}>
               Sign up
             </button>
-            <button className={classes.btn}>
+           </Link>
+           <Link to='LogIn'>
+           <button className={classes.btn}>
               Log in
             </button>
+           </Link>
+          
           </div>
       </div>
       <div className={classes.animation} ref={ani}>
