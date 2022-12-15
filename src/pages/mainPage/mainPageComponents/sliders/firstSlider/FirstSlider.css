@@ -35,3 +35,37 @@
   position: absolute;
   right: -52px;
 }
+
+
+
+.news{
+  padding-top: 10%;
+}
+.cards{
+  padding-top: 10%;
+}
+.card{
+  border: 0;
+  background: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  height: 100%;
+  text-align: left;
+}
+.card:first-of-type{
+  padding-left: 7%;
+}
+/* .card + .card{
+  margin-left: 50px;
+} */
+.cardImage{
+  border-radius: 10px;
+  width: 200px;
+  height: 250px;
+}
+.cardText{
+  padding-top: 12px;
+  font-size: 20px;
+  font-weight: 400;
+}
