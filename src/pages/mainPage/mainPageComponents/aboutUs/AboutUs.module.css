@@ -1,0 +1,127 @@
+.body{
+    background: #F5F5F5 1280px;
+}
+.container{
+    width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.AboutUs{
+    background:#F6F0F0;
+    padding: 50px 0 50px;
+}
+@media (max-width:400px) {
+    .AboutUs{
+        padding: 30px 0 40px;
+    }
+}
+.AboutUsItems{
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.AboutUsItem{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AboutUsFirstPart{
+    margin: 0,auto,auto,0;
+    justify-content: space-around;
+    width: 715px;
+    height: 445px;
+    left: 0px;
+    top: 1px;
+}
+/* .AboutUsSecondPart{
+    margin-left: 40px;
+} */
+
+
+.AboutUsSecondPart h2{
+    color: #0C3010;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 65px;
+    margin-left: -280px;
+}
+.AboutUsSecondPart p{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    color: #0C3010;
+    padding: auto;
+    margin-left: 40px;
+    text-decoration: none;
+    text-align: justify;
+}
+.AboutUsSecondPart button{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 45px;
+    color: #F7F0F0;
+    width: 200px;
+    height: 60px;
+    left: 739px;
+    top: 386px;
+    background: #0C3010;
+    border-radius: 38px;
+    margin-left: -240px;
+    margin-top: 25px;
+}
+
+/* mobile */
+
+.h2Node{
+    margin-bottom: 20px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 45px;
+
+    color: #0C3010;
+    text-align: center;
+}
+.imgMob {
+    margin: 20px auto;
+}
+.pNode{
+    margin: 0 auto;
+    width: 323px;
+    height: 100px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #0C3010;
+}
+.btn{
+    margin-bottom: 20px;
+    width: 196px;
+    height: 60px;
+    background: #0C3010;
+    border: 1px solid #EEDEDE;
+    border-radius: 38px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 60px;
+    color: #FFFFFF;
+}
+.btn:hover{
+    background: #FFFFFF;
+    border: 1px solid #0C3010;
+    color: #0C3010;
+}

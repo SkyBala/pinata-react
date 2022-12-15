@@ -1,12 +1,55 @@
 import React from 'react';
+import { BrowserRouter,Route,Routes, useHref, } from 'react-router-dom';
 import Main from './Main';
+import FormLog from './pages/formPages/formLog/FormLog';
+import FormSignUp from './pages/formPages/formSignUp/FormSignUp';
+import MainPage from './pages/mainPage/MainPage';
+import IndoorPage from './pages/catologPages/indoorPage/IndoorPage';
+import MainCatalog from './pages/catologPages/mainCatalog/MainCatalog';
+import MobileCatalog from './pages/catologPages/mobileCatalog/MobileCatalog';
+import News from './pages/catologPages/mobileCatalog/news/News'
+import MobileMainCatalog from './pages/catologPages/mobileMainCatalog/MobileMainCatalog';
+import CardsWrapper from './pages/catologPages/mobileCatalog/components/cardsWrapper/CardsWrapper';
+import {useMediaQuery} from '@mui/material'
+
+import DefaultPage from './components/defaultsPage/DefaultPage';
+import Layout from './components/layouts/Layout';
+
 
 function App() {
+
+  const isMobile = useMediaQuery('(max-width:401px)');
+  
   return (
     <div className="App">
-      <Main/>
+      
+        
+        <Routes>
+        
+            <Route path='/' element={<Layout/>}>
+           
+                <Route index element={<FormLog/>}/>
+                
+                <Route path='SignUp' element={<FormSignUp/>}/>
+                <Route path='*' element={<DefaultPage/>}/>
+                {/* <Route path='IndoorPage' element={<IndoorPage/>}/> */}
+                {/* <Route path='MobileMainCatalog' element={<MobileMainCatalog/>}/> */}
+                
+                {/* {isMobile?<Route path='MainPage' element={<News/>}/>
+                  :<Route path='MainPage' element={<MainCatalog/>}/>} */}
+
+                {/* {isMobile?<Route path='MainPage/IndoorPage' element={<MobileCatalog/>}/>
+                  :<Route path='MainPage/IndoorPage' element={<IndoorPage/>}/>} */}
+
+                {/* {isMobile?<Route path='MainPage/MobileMainCatalog' element={<MobileMainCatalog/>} />:null} */}
+
+            </Route>
+          </Routes>
+       
     </div>
+
   );
+
 }
 
 export default App;

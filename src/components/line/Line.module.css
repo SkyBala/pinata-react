@@ -1,0 +1,11 @@
+.line{
+     width: 1030px;
+     height: 3px;
+     background-color: #0C3010;
+     
+}
+@media (max-width:401px) {
+    .line{
+        width: 310px;
+   }
+}

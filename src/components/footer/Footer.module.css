@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding-left: 80px;
+    padding-right: 85px;
+}
+
+.footer {
+    
+    background-color: #AEA685;
+    background-size: cover;
+    padding-top: 62px ;
+    padding-bottom: 120px;
+}
+
+.footer_inner {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  
+    background-color: #AEA685;
+    background-size: cover;
+}
+
+.about, .join, .terms {
+    color: #0C3010;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+.about {
+    margin-top: 55px;
+    margin-left: 6px;
+    width: 153px;
+    height: 445px;
+    font-size: 20px;
+}
+
+.join {
+    width: 645px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.terms {
+    margin-top: 55px;
+    width: 179px;
+    height: 254px;
+    font-size: 20px;
+}
+
+.signUp_bar {
+    width: 600px;
+    height: 85px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.signUp_bar input {
+    background: transparent;
+    padding: 24px 18px;
+    flex: 1;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.signUp_btn {
+    margin-top: 20px;
+    width: 600px;
+    height: 63px;
+    background: #0C3010;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+    transition: .2s;
+}
+
+.signUp_btn:hover {
+    background: #FFFFFF;
+    color: #0C3010;
+    border: 2px solid #0C3010;
+}
+
+.img {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+    margin: 200px auto 0px;
+}
+
+.networks:hover {
+    background: #FFFFFF;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    transition: .2s;
+}
