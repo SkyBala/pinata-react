@@ -1,0 +1,47 @@
+* {
+    background-color: #F6F0F0;
+    font-family: sans-serif;
+}
+.proceed_title{
+    color: #0C3010;
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.proceed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.proceed_order{
+
+    font-size: 20px;
+
+}
+.proceed_text{
+    line-height: 45px;
+    font-size: 16px;
+    margin: 10px;
+}
+.proceed_contact {
+    color: #02780F
+}
+.proceed_image{
+    background-image: url("imgProceed/flower_proceed.png");
+    width: 82px;
+    height: 113px;
+    background-repeat: no-repeat;
+    margin-top: 44px;
+}
+.proceed_image2{
+    background-image: url("./imgProceed/image 61.png") ;
+    width: 113px;
+    height: 113px;
+    float: right;
+    background-repeat: no-repeat;
+    background-position: right ;
+
+}
