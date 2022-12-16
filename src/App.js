@@ -14,11 +14,12 @@ import DefaultPage from './components/defaultsPage/DefaultPage';
 import Layout from './components/layouts/Layout';
 import IntroPage from './pages/mobilkaPage/introPage/IntroPage';
 import LayoutMob from './components/layouts/LayoutMob';
+import Footer from './components/footer/Footer';
 
 
 function App() {
 
-  const isMobile = useMediaQuery('(min-width:401px)');
+  const isMobile = useMediaQuery('(min-width:420px)');
 
   
 
@@ -33,9 +34,7 @@ function App() {
               ?
               <Route path='/' element={<Layout/>}>
                 <Route path='*' element={<DefaultPage/>}/>
-                
                   <Route index element={<FormLog/>}/>
-    
                 <Route path='signUp' element={<FormSignUp/>}/>
                 <Route path='MainPage' element={<MainPage/>}/>
 
@@ -43,10 +42,15 @@ function App() {
             :
             <Route path='/' element={<LayoutMob/>}>
                 <Route  index element={<IntroPage/>}/>
-                <Route path='LogIn' element={<FormLog/>}/>
                 <Route path='*' element={<DefaultPage/>}/>
+
+                <Route path='LogIn' element={<FormLog/>}/>
                 <Route path='signUp' element={<FormSignUp/>}/>
-                <Route path='MainPage' element={<MainPage/>}/>
+
+               <Route path='/' element={<Main/>}>
+                  <Route path='MainPage' element={<MainPage/>}/>
+               </Route>
+
             </Route>
             }
             

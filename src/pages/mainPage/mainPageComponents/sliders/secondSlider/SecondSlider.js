@@ -4,55 +4,29 @@ import SliderComponents from './components/sliderComponents/SliderComponents';
 
 import arrow_left from "./imgSecondSlider/arrow_left.png";
 import arrow_right from "./imgSecondSlider/arrow_right.png";
-import star from "./imgSecondSlider/star.svg"
+
 import cl from './SecondSlider.module.css'
 
 import { Swiper, SwiperSlide} from "swiper/react";
 import { FreeMode , Autoplay , Navigation } from "swiper";
 import Line from '../../../../../components/line/Line';
 import { useMediaQuery } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { getReviews } from '../../../../../redux/actions/reviewsActions';
 
-const Carousel = () => {
-  const swiperRef = useRef();
-}
 
 
 function SecondSlider() {
-  const isMobile = useMediaQuery('(min-width:401px)')
+  const isMobile = useMediaQuery('(min-width:420px)')
+  const swiperRef = useRef();
+  const dispatch = useDispatch()
 
-  const items = [
-    {
-      img: star,
-      title: "Healthy & Carefully Packed My or healthy and very carefully packed. They allowed me to choose my shipping dat and the box ...",
-      subtitle: 'W.L.  12/04/22'
-    },
-    {
-      img: star,
-      title: 'Happy cusprice compared to all the local places. Unfortunately they are not standing very tall so I emailed the company ...',
-      subtitle: 'S.I.  27/03/22'
-    },
-    {
-      img: star,
-      title: 'Happy customer!We bought 1ocal places. very tall so I emailed the company ...',
-      subtitle: 'U.I.  27/03/22'
-    },
-    {
-      img: star,
-      title: 'Happy customer!We bought 16emailed the company ...',
-      subtitle: 'U.I.  27/03/22'
-    },
-    {
-      img: star,
-      title: 'Happy customer!We mpared to all the lt standing very tall so I emailed the company ...',
-      subtitle: 'U.I.  27/03/22'
-    },
-    {
-      img: star,
-      title: 'Happy customer!We bouo all the locaing very tall so I emailed the company ...',
-      subtitle: 'U.I.  27/03/22'
-    }
-  ]
-
+  useEffect(()=>{
+    dispatch(getReviews())
+  },[])
+  const {reviews} = useSelector(state=>state.rewiewsReducer)
+  console.log(reviews);
   return (
     <>
       {
@@ -64,12 +38,12 @@ function SecondSlider() {
           <h1>REVIEWS</h1>
         </div>
         <div className={cl.block1}>
-          <div><img src={arrow_left} className={cl.arrow_left} onClick={() => Carousel.current?.slidePrev()}  alt={cl.arrow_left}/></div>
+          <div><img src={arrow_left} className={cl.arrow_left} onClick={() => swiperRef.current?.slidePrev()}  alt={cl.arrow_left}/></div>
           <div className={cl.content_block}>
           <Swiper
               
               onBeforeInit={(swiper) => {
-                Carousel.current = swiper;
+                swiperRef.current = swiper;
                 }}
               freeMode={true}
               navigation
@@ -99,19 +73,17 @@ function SecondSlider() {
           }}
           >
 
-            {items.map(item=>
-            <SwiperSlide>
+            {reviews.map(item=>
+            <SwiperSlide key={item.id}>
                 <SliderComponents
-                    img={item.img}
-                    title={item.title}
-                    subtitle={item.subtitle}
+                    data={item}
                   />
             </SwiperSlide>)}
 
           </Swiper>
   
 
-            <div><img src={arrow_right} className={cl.arrow_right} onClick={() => Carousel.current?.slideNext()} alt={cl.arrow_right} /></div>
+            <div><img src={arrow_right} className={cl.arrow_right} onClick={() => swiperRef.current?.slideNext()} alt={cl.arrow_right} /></div>
           </div>
         </div>
 
@@ -121,7 +93,7 @@ function SecondSlider() {
     <Swiper
               
               onBeforeInit={(swiper) => {
-                Carousel.current = swiper;
+                swiperRef.current = swiper;
                 }}
               freeMode={true}
               navigation
@@ -133,12 +105,10 @@ function SecondSlider() {
               className='mySwiper'
               slidesPerView={1.5}
           >
-             {items.map(item=>
-            <SwiperSlide>
+             {reviews.map(item=>
+            <SwiperSlide key={item.id}>
                 <SliderComponents
-                    img={item.img}
-                    title={item.title}
-                    subtitle={item.subtitle}
+                    data={item}
                   />
             </SwiperSlide>)}
 

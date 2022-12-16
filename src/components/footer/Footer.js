@@ -12,7 +12,7 @@ import MobileHeader from './MobileHeader';
 
 
 function Footer() {
-  const checkMobile= useMediaQuery('(min-width:400px)')
+  const checkMobile= useMediaQuery('(min-width:420px)')
   return (
     <>
     {

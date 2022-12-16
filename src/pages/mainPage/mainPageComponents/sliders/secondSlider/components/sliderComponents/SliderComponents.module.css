@@ -1,15 +1,15 @@
 
 
 .block {
+    padding-top: 51px;
     width: 300px;
     height: 400px;
     background-color: #fff;
 }
 
 .img_stars {
-    width: 22px;
-    height: 22px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .texts {
@@ -17,7 +17,20 @@
     height: 264px;
     margin: 17px 40px 49px;
 }
+.pNode{
+    margin-top: 25px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 275;
+    font-size: 12px;
+    line-height: 20px;
+    /* or 167% */
+    opacity: 0.8;
+    text-align: center;
 
+    color: #000000;
+
+}
 .title {
     font-family: 'Titillium Web';
     font-style: normal;
@@ -28,14 +41,29 @@
     color: #000000; 
 }
 
+
 .subtitle {
-    width: 49px;
-    height: 48px;
+    width: 220.29px;
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    /* or 156% */
+
     text-align: center;
-    margin: 15px 70px 76px;
+
+    color: #000000;
 }
 
-
+@media (max-width:430px) {
+    .texts{
+        width: 195px;
+    }
+    .subtitle{
+        width: 192px;
+    }
+}
 /* mobile */
 
 .mobBLock{

@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide} from "swiper/react";
-import { FreeMode , Autoplay , Navigation, Scrollbar} from "swiper";
+import { FreeMode , Autoplay , Navigation, } from "swiper";
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,24 +12,30 @@ import img1 from './imgfirstSilder/img1.png'
 import img2 from './imgfirstSilder/img2.png'
 import img3 from './imgfirstSilder/img3.png'
 import { useMediaQuery } from "@mui/material";
-import Card from "../../../../catologPages/mobileCatalog/components/newsCardsWrapper/card/Card";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getBestSelAction } from "../../../../../redux/actions/bestSelAction";
 
-const Carousel = () => {
-    const swiperRef = useRef();
-}
+
 
 const FirstSlider = () => {
-    const isMobile = useMediaQuery('(min-width:401px)');
-
+    const isMobile = useMediaQuery('(min-width:420px)');
+    const swiperRef = useRef();
+    const dispatch = useDispatch()
+    useEffect(()=>{
+        dispatch(getBestSelAction())
+    },[])
+    const {flowers} =useSelector(state=>state.bestSelReducer)
+    console.log(flowers);
     return (
       <>{
         isMobile?
         <div className=" container  justify-content-center bg-cream slider-scroll-x" style={{minWidth: ''}}>
-        <h1>BEST SELLERS</h1>
+        <h1 className="FSlideH1">BEST SELLERS</h1>
             <Swiper
           
             onBeforeInit={(swiper) => {
-            Carousel.current = swiper;
+                swiperRef.current = swiper;
               }}
             freeMode={true}
             navigation
@@ -59,45 +65,22 @@ const FirstSlider = () => {
         }}
         >  
            <div className="container2">
-           
-            <SwiperSlide>
-                <CardSlider data={{ imgSrc: img1 }}  />
-                <p>Planty Room</p>
-            </SwiperSlide>
+                {flowers?.map((item)=>
+                    <SwiperSlide key={item.id}>
+                        <CardSlider data={item}  />  
+                        <p className="textP">{item.title}</p>
+                    </SwiperSlide>
+                )}
 
-            <SwiperSlide>
-                <CardSlider data={{ imgSrc: img2 }} />
-               <p>Schefflera Arboricola</p>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <CardSlider data={{ imgSrc: img3 }} />
-                <p>Hoya Plant</p>
-            </SwiperSlide>
-             
-            <SwiperSlide>
-                <CardSlider data={{ imgSrc: img1 }} />
-                <p>Planty Room</p>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <CardSlider data={{ imgSrc: img2 }} />
-                <p>Schefflera Arboricola</p>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <CardSlider data={{ imgSrc: img3 }} />
-                <p>Hoya Plant</p>
-                </SwiperSlide>
                 </div>
         </Swiper>
 
-        <div style={{cursor: 'pointer'}} className="arrows prev" onClick={() => Carousel.current?.slidePrev()}></div>
-        <div  style={{cursor: 'pointer'}}className="arrows next" onClick={() => Carousel.current?.slideNext()}></div>
+        <div style={{cursor: 'pointer'}} className="arrows prev" onClick={() => swiperRef.current?.slidePrev()}></div>
+        <div  style={{cursor: 'pointer'}}className="arrows next" onClick={() => swiperRef.current?.slideNext()}></div>
   </div>:<div className="news">
-            <h2 className="news__title">BEST SELLERS</h2>
+            <h2 className="FSnews__title">BEST SELLERS</h2>
 
-            <div className="cards">
+            <div className="cardss">
                 <Swiper
                     modules={[Navigation]}
                     spaceBetween={0}
@@ -105,24 +88,14 @@ const FirstSlider = () => {
                     loop={true}
                     loopFillGroupWithBlank={true}
                     >
-                    <SwiperSlide>
-                        <div className="card">
-                            <img className="cardImage" src={img1} alt="card-img" />
-                            <p className="cardText">Planty Room</p>
+                   {flowers?.map((item)=><SwiperSlide key={item.id}>
+                        <div className="cardd">
+                            <img className="cardImageM" src={item?.photos[1]} alt="card-img" />
+                            <p className="cardTextM">{item?.title}</p>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="card">
-                            <img className="cardImage" src={img2} alt="card-img" />
-                            <p className="cardText">Schefflera Arboricola</p>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="card">
-                            <img className="cardImage" src={img3} alt="card-img" />
-                            <p className="cardText">Hoya Plant</p>
-                        </div>
-                    </SwiperSlide>
+                   )}
+                  
                 </Swiper>
             </div>
         </div>

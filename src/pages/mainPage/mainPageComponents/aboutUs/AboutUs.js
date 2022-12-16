@@ -7,7 +7,7 @@ import mobileImg from './imgAboutUs/aboutUsMobile.png'
 
 
 function AboutUs() {
-  const isMobile = useMediaQuery('(min-width:401px)');
+  const isMobile = useMediaQuery('(min-width:420px)');
   
   return (   
       <div className={classes.AboutUs}>

@@ -30,16 +30,25 @@
   position: absolute;
   right: -52px;
 }
-
+.textP{
+  margin-top: 15px;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 45px;
+  color: #000000;
+  text-align: center;
+}
 
 
 .news{
   padding-top: 10%;
 }
-.cards{
+.cardss{
   padding-top: 10%;
 }
-.card{
+.cardd{
   border: 0;
   background: inherit;
   display: flex;
@@ -48,19 +57,47 @@
   height: 100%;
   text-align: left;
 }
-.card:first-of-type{
+.cardd:first-of-type{
   padding-left: 7%;
 }
 /* .card + .card{
   margin-left: 50px;
 } */
-.cardImage{
+.cardImageM{
   border-radius: 10px;
   width: 200px;
   height: 250px;
 }
-.cardText{
-  padding-top: 12px;
-  font-size: 20px;
+.cardTextM{
+  margin-top: 12px;
+  font-family: 'Titillium Web';
+  font-style: normal;
   font-weight: 400;
+  font-size: 20px;
+  line-height: 45px;
+  color: #000000;
+  width: 100%;
+  white-space: nowrap;
+}
+.FSlideH1{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 45px;
+  color: #000000;
+  text-align: center;
+}
+           
+.FSnews__title{
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 45px;
+  align-items: center;
+  color: #0C3010;
+  text-align: center;
 }

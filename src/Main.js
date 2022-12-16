@@ -1,13 +1,14 @@
 import React from "react";
-
-import "./Main.css";
+import { Outlet } from "react-router-dom";
+import Footer from "./components/footer/Footer";
 
 
 function Main() {
 
   return (
     <div>
-     
+     <Outlet/>
+     <Footer/>
     </div>
   );
 }

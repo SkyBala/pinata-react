@@ -23,8 +23,6 @@ function FormLog() {
       formData.forEach((item,id)=>{
         obj[id]=item
       })
-      console.log(obj);
-      console.log(user)
     if(obj.email === user.email && obj.password === user.password){
        dispatch(LogAction(JSON.stringify(obj)))
        setTimeout(()=>{
@@ -37,15 +35,14 @@ function FormLog() {
     }
     
   }
-  console.log(logIn);
 
   return (
     <div className={classes.formLogInPage}>
       <div className={classes.aroowLeft}>
-        <a href="">
+        <Link to={-1}>
           {" "}
           <img src={arrowLeft} alt="arrowLeft" />{" "}
-        </a>
+        </Link>
       </div>
       <div className={classes.container}>
         <div className={classes.forma}>

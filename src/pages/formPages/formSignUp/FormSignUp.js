@@ -76,15 +76,14 @@ function FormSignUp() {
        },5000)
        
   }
-  console.log(signIn);
   
   return (
     <div className={classes.formSignUpPage}>
       <div className={classes.aroowLeft}>
-        <a href="">
+        <Link to={-1}>
           {" "}
           <img src={arrowLeft} alt="arrowLeft" />{" "}
-        </a>
+        </Link>
       </div>
       <div className={classes.container}>
         <div className={classes.forma}>
