@@ -136,7 +136,6 @@ const handleChange = (event) => {
               display:"flex",
               justifyContent:"space-around",
               alignContent:"center",
-             
             }}>
               <button  className={styles.TripleButton}>
                 
@@ -145,7 +144,6 @@ const handleChange = (event) => {
                 
               </button>
               <button  className={styles.TripleButton}>
-               
               </button>
             </Box>
           </Box>
@@ -353,7 +351,6 @@ const handleChange = (event) => {
       }} >
       <BuskedModal closeModal = {setModal}/>
       </Box>}
-
 
   </Box>
   )

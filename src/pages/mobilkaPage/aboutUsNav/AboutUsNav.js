@@ -1,9 +1,9 @@
 import React from 'react'
 import classes from './AboutUsNav.module.css'
-import delivery from "../aboutUsNav/imgAboutUsNav/img1.png"
-import Flower from   "../aboutUsNav/imgAboutUsNav/img2.png"
-import Bottle from  "../aboutUsNav/imgAboutUsNav/img3.png"
-import Back from "../aboutUs/imgAboutUs/arrow_back_FILL0_wght400_GRAD0_opsz48.svg"
+import delivery from "./imgAboutUsNav/img1.png"
+import Flower from   "./imgAboutUsNav/img2.png"
+import Bottle from  "./imgAboutUsNav/img3.png"
+import Back from "@mui/icons-material/ArrowBack"
 function AboutUsNav() {
   return (
     <div className={classes.AboutUsNav}>

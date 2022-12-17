@@ -1,8 +1,6 @@
-* {
+.proceed_title{
     background-color: #F6F0F0;
     font-family: sans-serif;
-}
-.proceed_title{
     color: #0C3010;
     font-size: 24px;
     margin-top: 50px;
@@ -12,14 +10,11 @@
 .proceed{
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
-
-
 }
 .proceed_order{
-
     font-size: 20px;
-
 }
 .proceed_text{
     line-height: 45px;
@@ -43,5 +38,4 @@
     float: right;
     background-repeat: no-repeat;
     background-position: right ;
-
 }

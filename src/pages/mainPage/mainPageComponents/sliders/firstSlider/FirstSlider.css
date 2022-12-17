@@ -39,6 +39,8 @@
   line-height: 45px;
   color: #000000;
   text-align: center;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 
@@ -57,6 +59,7 @@
   height: 100%;
   text-align: left;
 }
+
 .cardd:first-of-type{
   padding-left: 7%;
 }
@@ -78,6 +81,10 @@
   color: #000000;
   width: 100%;
   white-space: nowrap;
+  transition: 0.2s;
+}
+.cardd:hover {
+  transform: scale(1.0);   
 }
 .FSlideH1{
   margin-top: 50px;
@@ -100,4 +107,12 @@
   align-items: center;
   color: #0C3010;
   text-align: center;
+}
+.wrapper{
+  transition: 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+}
+.wrapper:hover{
+  transform: scale(1.02);
 }

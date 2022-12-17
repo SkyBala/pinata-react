@@ -11,10 +11,11 @@ import { useRef } from "react";
 import img1 from './imgfirstSilder/img1.png'
 import img2 from './imgfirstSilder/img2.png'
 import img3 from './imgfirstSilder/img3.png'
-import { useMediaQuery } from "@mui/material";
+import { Link, useMediaQuery } from "@mui/material";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getBestSelAction } from "../../../../../redux/actions/bestSelAction";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -26,11 +27,11 @@ const FirstSlider = () => {
         dispatch(getBestSelAction())
     },[])
     const {flowers} =useSelector(state=>state.bestSelReducer)
-    console.log(flowers);
+    const navigate = useNavigate()
     return (
       <>{
         isMobile?
-        <div className=" container  justify-content-center bg-cream slider-scroll-x" style={{minWidth: ''}}>
+        <div className=" container  justify-content-center bg-cream slider-scroll-x" style={{minWidth: ''}} id='sliderr'>
         <h1 className="FSlideH1">BEST SELLERS</h1>
             <Swiper
           
@@ -64,11 +65,13 @@ const FirstSlider = () => {
                }
         }}
         >  
+
            <div className="container2">
                 {flowers?.map((item)=>
-                    <SwiperSlide key={item.id}>
+                    <SwiperSlide  style={{textDecoration:'none'}}
+                     key={item?.id} onClick={()=>navigate(`/Indoor/${item?.id}`)}>
                         <CardSlider data={item}  />  
-                        <p className="textP">{item.title}</p>
+                        <p className="textP" >{item.title}</p>
                     </SwiperSlide>
                 )}
 
@@ -77,7 +80,7 @@ const FirstSlider = () => {
 
         <div style={{cursor: 'pointer'}} className="arrows prev" onClick={() => swiperRef.current?.slidePrev()}></div>
         <div  style={{cursor: 'pointer'}}className="arrows next" onClick={() => swiperRef.current?.slideNext()}></div>
-  </div>:<div className="news">
+  </div>:<div className="news" id='sliderr'>
             <h2 className="FSnews__title">BEST SELLERS</h2>
 
             <div className="cardss">
@@ -88,12 +91,15 @@ const FirstSlider = () => {
                     loop={true}
                     loopFillGroupWithBlank={true}
                     >
-                   {flowers?.map((item)=><SwiperSlide key={item.id}>
+                   {flowers?.map((item)=>
+                   
+                <SwiperSlide key={item?.id} onClick={()=>navigate(`/Indoor/${item?.id}`)} >
                         <div className="cardd">
                             <img className="cardImageM" src={item?.photos[1]} alt="card-img" />
                             <p className="cardTextM">{item?.title}</p>
                         </div>
-                    </SwiperSlide>
+                </SwiperSlide>
+                   
                    )}
                   
                 </Swiper>

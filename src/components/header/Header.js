@@ -8,24 +8,25 @@ import HeaderUser from './img/user.svg'
 import {NavLink } from "react-router-dom";
 import HeaderModal from "./Components/HeaderModal";
 import { useMediaQuery } from '@mui/material'
+import { useSelector } from 'react-redux'
 
 
 
 function Header() {
 
 const [showModal, setShowModal] = useState(false)
-const isMobile = useMediaQuery('(min-width:401px)');
+const isMobile = useMediaQuery('(min-width:420px)')
+const {catagory}=useSelector(state=>state.catalogReducer)
+
   return (
         <>
             {
             isMobile?
             <header className={classes.header}
-        onMouseEnter={ () =>{
-            setShowModal(true)
-        }
-        }onMouseLeave={() => {
+        onMouseLeave={() => {
             setShowModal(false);
         }}
+
     >
         <div className="container">
             <div className={classes.header_inner}>
@@ -34,17 +35,20 @@ const isMobile = useMediaQuery('(min-width:401px)');
                 </div>
                 <div className={classes.header_nav}>
                     <ul className={classes.header_nav_ul}>
-                        <li><NavLink >PLANTS</NavLink></li>
-                        <li><NavLink >CARE TOOLS </NavLink></li>
-                        <li><NavLink >GIFTS</NavLink></li>
+                        <li  onClick={ () =>{
+            setShowModal(true)
+        }
+        }><NavLink >PLANTS</NavLink></li>
+                        <li><NavLink to='aboutUs'>CARE TOOLS </NavLink></li>
+                        <li><NavLink to={`/MainPage/${catagory[1]?.id }`} >GIFTS</NavLink></li>
                         <li><NavLink >LEARN</NavLink></li>
                     </ul>
                 </div>
                 <div className={classes.header_nav_icons}>
                     <ul className={classes.header_nav_icon_ul}>
-                        <li><a href=""><img src={HeaderSearch} alt=""/></a></li>
-                        <li><a href=""><img src={HeaderBasket} alt=""/></a></li>
-                        <li><a href=""><img src={HeaderUser} alt=""/></a></li>
+                        <li><NavLink to=''><img src={HeaderSearch} alt=""/></NavLink></li>
+                        <li><NavLink to=''><img src={HeaderBasket} alt=""/></NavLink></li>
+                        <li><NavLink to='profil'><img src={HeaderUser} alt=""/></NavLink></li>
                     </ul>
                 </div>
             </div>

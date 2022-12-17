@@ -27,6 +27,10 @@
     padding-bottom: 5%;
     text-decoration: none;
     color: inherit;
+    transition: 0.2s;
+}
+.card:hover{
+    transform: scale(1.02);
 }
 .cardText{
     width: 250px;

@@ -10,7 +10,11 @@
     width: 250px;
     border: none;
     margin-bottom:35px;
+    transition: 0.2s;
     
+}
+.buttonPost:hover{
+    transform: scale(1.02);
 }
 
 

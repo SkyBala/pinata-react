@@ -26,7 +26,7 @@ function SecondSlider() {
     dispatch(getReviews())
   },[])
   const {reviews} = useSelector(state=>state.rewiewsReducer)
-  console.log(reviews);
+
   return (
     <>
       {

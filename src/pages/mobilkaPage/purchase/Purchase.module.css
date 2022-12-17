@@ -1,11 +1,9 @@
-* {
-    font-family: sans-serif;
-    background-color: #F6F0F0;
-}
 .purchase {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #F6F0F0;
+    font-family: sans-serif;
 }
 .purchase_title {
     color: #0C3010;

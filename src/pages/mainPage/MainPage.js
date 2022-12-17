@@ -1,7 +1,6 @@
 import React from 'react'
 import Line from '../../components/line/Line'
 import MainCatalog from '../catologPages/mainCatalog/MainCatalog'
-import classes from './MainPage.module.css'
 import AboutUs from './mainPageComponents/aboutUs/AboutUs'
 import FirstBlock from './mainPageComponents/firstBlock/FirstBlock'
 import SaleBlock from './mainPageComponents/saleBlock/SaleBlock'
@@ -18,13 +17,11 @@ function MainPage() {
       <AboutUs/>
       <SaleBlock />
       <Line/>
-      <FirstSlider/>
+      <FirstSlider />
       <MainCatalog/>
       <SecondSlider/>
     </div>
   )
-  
-  
 }
 
 export default MainPage
