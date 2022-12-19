@@ -3,7 +3,7 @@ import {Box} from "@mui/material"
 import Bimg from "./img/Bimg.png"
 import styles from "./BaskedPage.module.css"
 import Button from "@mui/material/Button"
-import { types } from '../../../redux/types'
+import { busketTypes } from '../../../redux/types/busketTypes'
 import { useDispatch, useSelector } from "react-redux"
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -23,13 +23,13 @@ function BaskedPage() {
 
 const BuskedInc =() => {
 dispatch({
-  type:types.BUSKED_INC
+  type:busketTypes.BUSKED_INC
 })
 }
 
 const BuskedDec =() => {
   dispatch({
-    type: types.BUSKED_DEC
+    type: busketTypes.BUSKED_DEC
     })
 }
 
@@ -44,8 +44,7 @@ const handleChange = (event) => {
   return (
     <Box sx={{
       backgroundColor:"#F6F0F0",
-     height:"100vh",
-     width:"100vw",
+
     }}>
       <Box sx={{
         display:'flex',
@@ -164,13 +163,16 @@ const handleChange = (event) => {
               justifyContent:"space-between",
               marginRight:"29px",
               alignItems:"center",
+              textAlign:"center",
               "& button":{
                 height:"42px",
                 width:"50px",
                 border:"none",
                 backgroundColor:"#F6F0F0",
               },
-              
+              "& h1":{
+                margin:"0",
+              }
             
             }}>
                 <button
@@ -246,13 +248,14 @@ const handleChange = (event) => {
           variant="standard"
         >
           <MenuItem value="" color="success">
-            default
+          Details and Care 
           </MenuItem>
           <MenuItem value={1} color="success">
-            Ten
+            S
           </MenuItem>
-          <MenuItem value={2}>Twenty</MenuItem>
-          <MenuItem value={3}>Thirty</MenuItem>
+          <MenuItem value={2}>M</MenuItem>
+          <MenuItem value={3}>L</MenuItem>
+          <MenuItem value={4}>XL</MenuItem>
         </Select>
       </FormControl>
       <FormControl
@@ -282,13 +285,14 @@ const handleChange = (event) => {
           variant="standard"
         >
           <MenuItem value="" color="success">
-            default
+          Description 
           </MenuItem>
           <MenuItem value={1} color="success">
-            Ten
+            S
           </MenuItem>
-          <MenuItem value={2}>Twenty</MenuItem>
-          <MenuItem value={3}>Thirty</MenuItem>
+          <MenuItem value={2}>M</MenuItem>
+          <MenuItem value={3}>L</MenuItem>
+          <MenuItem value={4}>XL</MenuItem>
         </Select>
       </FormControl>
     </Box>
@@ -346,7 +350,7 @@ const handleChange = (event) => {
       {modal && <Box
       sx ={{
         position:"absolute",
-        top:"0%",left:'66.7%',
+        top:"109px",left:'68.35%',
         overflow:"hidden",
       }} >
       <BuskedModal closeModal = {setModal}/>

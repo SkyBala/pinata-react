@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import React from 'react'
 import Arrow from "./BuskedMobileImg/arrow.svg"
-import {types} from "../../../redux/types"
+import { busketTypes } from '../../../redux/types/busketTypes'
 import { useDispatch, useSelector } from "react-redux"
 // import { useState } from 'react'
 import Button from "@mui/material/Button"
@@ -24,13 +24,13 @@ function BuskedMobile ()  {
     
 const BuskedInc =() => {
     dispatch({
-      type:types.BUSKED_INC
+      type:busketTypes.BUSKED_INC
     })
     }
     
     const BuskedDec =() => {
       dispatch({
-        type:types.BUSKED_DEC
+        type:busketTypes.BUSKED_DEC
         })
     }
 
@@ -204,6 +204,7 @@ const BuskedInc =() => {
                 fontSize: '16px',
                 lineHeight: '24px',
                 color: '#0C3010',
+                margin:"0",
               },
             }}>
             <button
