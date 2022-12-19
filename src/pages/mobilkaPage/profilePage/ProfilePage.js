@@ -6,11 +6,6 @@ import userPhoto from "./imgProfilePage/user_icon.svg"
 import purchase from "./imgProfilePage/purchase_icon.svg"
 import info from "./imgProfilePage/info_icon.svg"
 import goOut from "./imgProfilePage/goOut_icon.svg"
-import home from "./imgProfilePage/home_icon.svg"
-import search from "./imgProfilePage/search_icon.svg"
-import aboutUs from "./imgProfilePage/aboutUs_icon.svg"
-import basket from "./imgProfilePage/basket_icon.svg"
-import profile from "./imgProfilePage/profile_icon.svg"
 
 import { Link } from "react-router-dom";
 
@@ -20,7 +15,9 @@ function ProfilePage() {
     <div className={classes.profileBackground}>
       <div className={classes.pageName}>
         <button className={classes.arrowButton}>
+          <Link to={-1}>
           <img src={arrowLeft} alt="back"/>
+          </Link>
         </button>
         <p className={classes.pageNameText}>Profile</p>
       </div>

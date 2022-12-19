@@ -15,7 +15,7 @@ function MainPage() {
     <div style={{background:'#F6F0F0'}}>
       <FirstBlock/>
       <AboutUs/>
-      <SaleBlock />
+      <SaleBlock/>
       <Line/>
       <FirstSlider />
       <MainCatalog/>

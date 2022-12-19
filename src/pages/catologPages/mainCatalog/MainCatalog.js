@@ -24,8 +24,6 @@ function MainCatalog() {
     dispatch(getinfoAction())
   },[])
   const {catagory}=useSelector(state=>state.catalogReducer)
-  console.log(catagory);
-
 
   return (
       <>

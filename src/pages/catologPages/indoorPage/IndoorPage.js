@@ -21,7 +21,6 @@ const IndoorPage = () => {
     },[id])
 
     const {page}=useSelector(state=>state.catalogReducer)
-    console.log(page)
     return (
         <div style={{backgroundColor:"#F6F0F0", padding:"50px 0 50px"}}> 
             <h1 className={classes.nameOfCards}>{page[0]?.categories[0]?.title}</h1>

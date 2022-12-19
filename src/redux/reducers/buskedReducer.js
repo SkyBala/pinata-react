@@ -1,5 +1,3 @@
-import React from "react";
-import { types } from "../types/busketTypes";
 
 const InitialState = {
     count: 0 ,

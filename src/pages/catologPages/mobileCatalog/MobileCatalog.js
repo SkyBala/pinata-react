@@ -13,7 +13,9 @@ const MobileCatalog = () => {
   useEffect(()=>{
       dispatch(getPageAction(id))
   },[id])
+
   const {page}=useSelector(state=>state.catalogReducer)
+  
   return (
     <>
       <Link to={-1}>

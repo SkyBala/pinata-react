@@ -4,6 +4,7 @@ import Line from '../../../../components/line/Line'
 import classes from './AboutUs.module.css'
 import img from './imgAboutUs/flowers.png'
 import mobileImg from './imgAboutUs/aboutUsMobile.png'
+import { Link } from 'react-router-dom';
 
 
 function AboutUs() {
@@ -25,7 +26,9 @@ function AboutUs() {
                   <h2>ABOUT US</h2>
                   <p>When you buy houseplants online from Pianta, they are not <br/> only conveniently delivered to your door but are shipped <br/> directly from our greenhouse. This means that your Pianta <br/> potted plant arrives healthy and thriving.
   Most indoor <br/> plants you buy from a box store or other retailer spend 3–4 <br/> weeks getting from the greenhouse to your home. Buying <br/> houseplants online is not only easier, but it’s also better for <br/> the health of the plant.</p>
+                <Link to='/aboutUs'>
                   <button>Learn more</button>
+                </Link>
                 </div>
               </div>
             </div>
@@ -36,7 +39,7 @@ function AboutUs() {
               <Line/>
               <center> <img className={classes.imgMob} src={mobileImg} alt="" /> </center>
               <p className={classes.pNode}>When you buy houseplants online from Pianta, <br /> they are not only conveniently delivered to your <br /> door but are shipped directly from our greenhouse. <br /> This...</p>
-             <center> <button className={classes.btn}>Learn more</button></center>
+              <Link to='/aboutUs'><center> <button className={classes.btn}>Learn more</button></center></Link>
               <Line/>
         </div>
       }

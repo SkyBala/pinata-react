@@ -24,6 +24,7 @@ import MobileCatalog from './pages/catologPages/mobileCatalog/MobileCatalog';
 import MobileMainCatalog from './pages/catologPages/mobileMainCatalog/MobileMainCatalog';
 
 import LoadPage from './pages/mobilkaPage/loadPage/LoadPage';
+import BaskedPage from './pages/busketPage/BuskedDekstop/BaskedPage';
 
 
 function App() {
@@ -58,6 +59,8 @@ function App() {
                 <Route path='delivery' element={<DeliveryPage/>}/>
                 <Route path='MainPage/:id' element={<IndoorPage/>}/>
                 <Route path='Indoor/:id' element={<LoadPage/>}/>
+                <Route path='baskedPage' element={<BaskedPage/>}/>
+
             </Route>
             :
             <Route path='/' element={<LayoutMob/>}>
@@ -75,9 +78,7 @@ function App() {
                   <Route path='paymentPage' element={<PaymentPage/>}/>
                   <Route path='profil' element={<ProfilePage/>}/>
                   <Route path='MainPage/:id' element={<MobileCatalog/>}/>
-                   <Route path='Indoor/:id' element={<LoadPage/>}/>
-                 
-
+                  <Route path='Indoor/:id' element={<LoadPage/>}/>
                   <Route path='MainPage/catalog' element={<MobileMainCatalog/>}/>
 
                </Route>

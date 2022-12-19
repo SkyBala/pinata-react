@@ -5,14 +5,14 @@ import IntroPage from '../../pages/mobilkaPage/introPage/IntroPage'
 
 import Footer from '../footer/Footer'
 import Header from '../header/Header'
+import Poisk from '../poisk/Poisk'
 
 function Layout() {
-  const isMobile = useMediaQuery('(min-width:401px)');
-  
   return (
     <div>
           <Header/>
             <Outlet/>
+            <Poisk/>
           <Footer/>
     </div>
   )

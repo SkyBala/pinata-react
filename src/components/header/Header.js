@@ -8,7 +8,8 @@ import HeaderUser from './img/user.svg'
 import {NavLink } from "react-router-dom";
 import HeaderModal from "./Components/HeaderModal";
 import { useMediaQuery } from '@mui/material'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { openCloseAction } from '../../redux/actions/compActions'
 
 
 
@@ -17,7 +18,8 @@ function Header() {
 const [showModal, setShowModal] = useState(false)
 const isMobile = useMediaQuery('(min-width:420px)')
 const {catagory}=useSelector(state=>state.catalogReducer)
-
+const dispatch = useDispatch()
+const handleOpen = () => dispatch(openCloseAction());
   return (
         <>
             {
@@ -38,17 +40,17 @@ const {catagory}=useSelector(state=>state.catalogReducer)
                         <li  onClick={ () =>{
             setShowModal(true)
         }
-        }><NavLink >PLANTS</NavLink></li>
-                        <li><NavLink to='aboutUs'>CARE TOOLS </NavLink></li>
-                        <li><NavLink to={`/MainPage/${catagory[1]?.id }`} >GIFTS</NavLink></li>
-                        <li><NavLink >LEARN</NavLink></li>
+        }>              <NavLink >PLANTS</NavLink></li>
+                        <li><NavLink className={({isActive})=>isActive?'isActive':''} to='paymentPage'>CARE TOOLS </NavLink></li>
+                        <li><NavLink className={({isActive})=>isActive?'isActive':''} to={`/MainPage/${catagory[1]?.id }`} >GIFTS</NavLink></li>
+                        <li><NavLink className={({isActive})=>isActive?'isActive':''} to='aboutUs' >LEARN</NavLink></li>
                     </ul>
                 </div>
                 <div className={classes.header_nav_icons}>
                     <ul className={classes.header_nav_icon_ul}>
-                        <li><NavLink to=''><img src={HeaderSearch} alt=""/></NavLink></li>
-                        <li><NavLink to=''><img src={HeaderBasket} alt=""/></NavLink></li>
-                        <li><NavLink to='profil'><img src={HeaderUser} alt=""/></NavLink></li>
+                        <li><div style={{cursor:'pointer'}} onClick={handleOpen}><img src={HeaderSearch} alt=""/></div></li>
+                        <li><><img src={HeaderBasket} alt=""/></></li>
+                        <li><NavLink className={({isActive})=>isActive?'isActive':''} to='profil'><img src={HeaderUser} alt=""/></NavLink></li>
                     </ul>
                 </div>
             </div>

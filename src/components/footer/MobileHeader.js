@@ -5,45 +5,51 @@ import search from "./imgMobileHeader/search.svg";
 import us from "./imgMobileHeader/us.svg";
 import basket from "./imgMobileHeader/basket.svg";
 import profile from "./imgMobileHeader/profile.svg";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { openCloseAction } from "../../redux/actions/compActions";
 
 
 
 
 function MobileHeader() {
+    const dispatch = useDispatch()
+
+    const handleOpen = () => dispatch(openCloseAction());
 
     return (
         <div style={{color:'white'}} className={classes.mobileHeader}>
             <div className={classes.container}>
                 <div className={classes.mobileHeader_inner}>
                     <div className={classes.home}>
-                        <a href="">
+                        <Link to='MainPage'>
                             <img src={home} alt="home"/>
                             <p className={classes.text}>Home</p>
-                        </a>
+                        </Link>
                     </div>
                     <div className={classes.search}>
-                        <a href="">
+                        <Link onClick={handleOpen}>
                             <img src={search} alt="search"/>
                             <p className={classes.text}>Search</p>
-                        </a>
+                        </Link>
                     </div>
                     <div className={classes.us}>
-                        <a href="">
+                        <Link to=''>
                             <img src={us} alt="us"/>
                             <p className={classes.text}>Us</p>
-                        </a>
+                        </Link>
                     </div>
                     <div className={classes.basket}>
-                        <a href="">
+                        <Link to=''>
                             <img src={basket} alt="basket"/>
                             <p className={classes.text}>Basket</p>
-                        </a>
+                        </Link>
                     </div>
                     <div className={classes.profile}>
-                        <a href="">
+                        <Link to=''>
                             <img src={profile} alt="profile"/>
                             <p className={classes.text}>Profile</p>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

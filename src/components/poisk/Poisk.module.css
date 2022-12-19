@@ -1,32 +1,31 @@
-
 .searchPage {
-    height: 100vh;
-    background-color: #F6F0F0;
-    padding: 28px 10px;
+  background-color: #f6f0f0;
+  padding: 28px 10px;
+  height: 100vh;
 }
 .searchInput {
-    width: 100%;
-    height: 44px;
-    padding: 7px 6px 7px 44px;
-    border-radius: 10px;
-    background-color: #D9D9D9;
-    border: none;
-    outline: none;
-    color: #0C3010;
-    font-family: 'Titillium Web', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
+  width: 100%;
+  height: 44px;
+  padding: 7px 6px 7px 44px; 
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  border: none;
+  outline: none;
+  color: #0c3010;
+  font-family: "Titillium Web", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
 }
 .search {
-    position: relative;
+  position: relative;
 }
 .search::before {
-    content: url("imgPoisk/search_icon.svg");
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 5px;
-    top: 15%;
+  content: url("imgPoisk/search_icon.svg");
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 5px;
+  top: 15%;
 }

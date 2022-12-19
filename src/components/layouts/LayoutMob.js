@@ -4,7 +4,7 @@ import { Outlet } from 'react-router'
 function LayoutMob() {
   return (
     <div>
-        <Outlet/>  
+        <Outlet/>
     </div>
   )
 }

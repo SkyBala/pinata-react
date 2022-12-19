@@ -13,12 +13,12 @@ function HeaderModal ()  {
         <div className={classes.header_modal_inner}>
             <div className={classes.header_modal_nav}>
                 <ul className={classes.header_modal_nav_ul}>
-                    <li><NavLink to={`/MainPage/${catagory[0]?.id }`}>{catagory[0]?.title}</NavLink></li>
-                    <li><NavLink to={`/MainPage/${catagory[1]?.id }`}>{catagory[2]?.title}</NavLink></li>
-                    <li><NavLink to={`/MainPage/${catagory[2]?.id }`}>{catagory[2]?.title}</NavLink></li>
-                    <li><NavLink to={`/MainPage/${catagory[3]?.id }`}>{catagory[3]?.title}</NavLink></li>
-                    <li><NavLink to={`/MainPage/${catagory[4]?.id }`}>{catagory[4]?.title}</NavLink></li>
-                    <li><NavLink to={`/MainPage/${catagory[5]?.id }`}>{catagory[5]?.title}</NavLink></li>
+                    <li><NavLink className={({isActive})=>isActive?'isActive':''}  to={`/MainPage/${catagory[0]?.id }`}>{catagory[0]?.title}</NavLink></li>
+                    <li><NavLink className={({isActive})=>isActive?'isActive':''} to={`/MainPage/${catagory[1]?.id }`}>{catagory[1]?.title}</NavLink></li>
+                    <li><NavLink className={({isActive})=>isActive?'isActive':''} to={`/MainPage/${catagory[2]?.id }`}>{catagory[2]?.title}</NavLink></li>
+                    <li><NavLink className={({isActive})=>isActive?'isActive':''} to={`/MainPage/${catagory[3]?.id }`}>{catagory[3]?.title}</NavLink></li>
+                    <li><NavLink className={({isActive})=>isActive?'isActive':''} to={`/MainPage/${catagory[4]?.id }`}>{catagory[4]?.title}</NavLink></li>
+                    <li><NavLink className={({isActive})=>isActive?'isActive':''} to={`/MainPage/${catagory[5]?.id }`}>{catagory[5]?.title}</NavLink></li>
                 </ul>
             </div>
             <div className={classes.header_modal_content}>

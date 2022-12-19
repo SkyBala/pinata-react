@@ -3,12 +3,12 @@ import {Box} from "@mui/material"
 import Bimg from "./img/Bimg.png"
 import styles from "./BaskedPage.module.css"
 import Button from "@mui/material/Button"
-import { types } from '../../../redux/types'
 import { useDispatch, useSelector } from "react-redux"
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import BuskedModal from './buskedModal/BuskedModal';
+import { busketTypes } from '../../../redux/types/busketTypes'
 
 
 function BaskedPage() {
@@ -23,13 +23,13 @@ function BaskedPage() {
 
 const BuskedInc =() => {
 dispatch({
-  type:types.BUSKED_INC
+  type:busketTypes.BUSKED_INC
 })
 }
 
 const BuskedDec =() => {
   dispatch({
-    type: types.BUSKED_DEC
+    type: busketTypes.BUSKED_DEC
     })
 }
 

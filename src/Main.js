@@ -1,14 +1,17 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Footer from "./components/footer/Footer";
+
+import MobileHeader from "./components/footer/MobileHeader";
+import Poisk from "./components/poisk/Poisk";
 
 
 function Main() {
 
   return (
     <div>
-     <Outlet/>
-     <Footer/>
+      <Outlet/>
+      <MobileHeader/>
+      <Poisk/>
     </div>
   );
 }
