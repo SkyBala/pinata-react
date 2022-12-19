@@ -12,13 +12,13 @@ import { Link } from 'react-router-dom'
 function IntroPage() {
  const ani =useRef()
  setTimeout(()=>{
-  ani.current.style.opacity='0'
-  
+  ani.current.style.opacity='0.3'
  },5000)
  setTimeout(()=>{
   
   ani.current.style.display = 'none'
  },6000)
+ 
 
   return (
     <>

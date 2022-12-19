@@ -7,7 +7,7 @@ const Colors = ({colors}) => {
     <div className={c.colors}>
       {
         colors.map((color,index)=>{
-          return <div className={c.colors__item} style={{backgroundColor: `${color}`}} key={index}></div>
+          return <div className={c.colors__item} style={{backgroundColor:`${color.title}`}} key={index}></div>
         })
       }
     </div>

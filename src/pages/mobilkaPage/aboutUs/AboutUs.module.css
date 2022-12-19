@@ -68,7 +68,12 @@
     
     color: #000000;
 }
-
+.pageNameText{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 .AboutUsRegion p{
     font-family: 'Titillium Web';
     font-style: normal;
@@ -78,6 +83,7 @@
     width: 342px;
     color: #0C3010;
     margin-top: 20px;
+    
 }
 
 .AboutUsRegion a {
@@ -91,10 +97,12 @@
 
 .arrowButton {
     width: 24px;
-    height: 24px;
-    margin: 10px 10px;
+    height: 100%;
+    margin: 0 10px;
     border: none;
     background-color: rgba(12, 48, 16, 0);
+    display: flex;
+    align-items: center;
 }
 
 .AboutUsImg{

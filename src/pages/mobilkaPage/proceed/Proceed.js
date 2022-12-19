@@ -2,8 +2,23 @@ import React from 'react'
 import classes from './Proceed.module.css'
 
 function Proceed() {
+
   return (
-      <div>Proceed</div>
+    <div>
+      <div className={classes.proceed}>
+          <h2 className={classes.proceed_title}>Proceed</h2>
+          <div className={classes.proceed_text}>
+              <h4 className={classes.proceed_order}>Your order has been successfully sent</h4>
+              <p>We will contact you shortly to clarify the details <br/> of the order</p>
+              <p>If you need it very urgently,please contact us:</p>
+              <p>Our phone <a className={classes.proceed_contact} href="">+765939550093</a> </p>
+              <p>Our <span className={classes.proceed_contact}>whatsapp</span></p>
+          </div>
+
+      </div>
+        <div className={classes.proceed_image}></div>
+        <div className={classes.proceed_image2}></div>
+    </div>
   )
 }
 

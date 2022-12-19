@@ -8,7 +8,7 @@ import { useMediaQuery } from '@mui/material'
 
 
 function IndoorInner() {
-  const isMobile = useMediaQuery('(min-width:401px)');
+  const isMobile = useMediaQuery('(min-width:420px)');
   
   return (
    <>

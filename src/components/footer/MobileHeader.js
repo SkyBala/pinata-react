@@ -12,7 +12,7 @@ import profile from "./imgMobileHeader/profile.svg";
 function MobileHeader() {
 
     return (
-        <div className={classes.mobileHeader}>
+        <div style={{color:'white'}} className={classes.mobileHeader}>
             <div className={classes.container}>
                 <div className={classes.mobileHeader_inner}>
                     <div className={classes.home}>

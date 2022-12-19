@@ -6,59 +6,72 @@ import outdoorPlantsImg from './imgMainCatalog/Outdoor-plants.jpg'
 import LowMaintenancePlants from './imgMainCatalog/Low-Maintenance-Plants.jpg'
 import NewArrivals from './imgMainCatalog/New-Arrivals.jpg'
 import PetFriendlyPlants from './imgMainCatalog/Pet-Friendly-Plants.jpg'
-import {Link, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import { useMediaQuery } from '@mui/material'
 import News from '../mobileCatalog/news/News'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { getinfoAction } from '../../../redux/actions/catalogActions'
 
 
 
 
 
 function MainCatalog() {
-  const isMobile = useMediaQuery('(min-width:401px)');
+  const isMobile = useMediaQuery('(min-width:420px)');
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(getinfoAction())
+  },[])
+  const {catagory}=useSelector(state=>state.catalogReducer)
+  console.log(catagory);
+
 
   return (
       <>
       {
         isMobile?
         <div  className={classes.mainCatalog}>
-        <h1 className={classes.title}>CATALOGS</h1>
+        <h1 className={classes.title}>Catalog</h1>
         <div className={classes.cardsBox}>
-          <NavLink 
-          to="/MainPage/IndoorPage"
+          <Link to={`/MainPage/${catagory[0]?.id }`}
           className={classes.card}>
             <div className={classes.card}>
               <img className={classes.cardImg} src={indoorPlantsImg} alt="card-img"/>
-              <p className={classes.cardText}>Indoor Plants </p>
+              <p className={classes.cardText}>{catagory[0]?.title} </p>
             </div>
-          </NavLink>
-
+          </Link>
+          <Link to={`/MainPage/${catagory[1]?.id }`}>
           <div className={classes.card}>
             <img className={classes.cardImg} src={giftsImg} alt="card-img" />
-            <p className={classes.cardText}>Gifts </p>
+            <p className={classes.cardText}>{catagory[1]?.title} </p>
           </div>
-
+          </Link>
+          <Link to={`/MainPage/${catagory[2]?.id }`}>
           <div className={classes.card}>
             <img className={classes.cardImg} src={outdoorPlantsImg} alt="card-img" />
-            <p className={classes.cardText}>Outdoor Plants </p>
+            <p className={classes.cardText}>{catagory[2]?.title}</p>
           </div>
-
-
+        </Link>
+        <Link to={`/MainPage/${catagory[3]?.id }`}>
           <div className={classes.card}>
             <img className={classes.cardImg} src={LowMaintenancePlants} alt="card-img"/>
-            <p className={`${classes.cardText}`}>Low-Maintenance Plants </p>
+            <p className={`${classes.cardText}`}>{catagory[3]?.title} </p>
           </div>
+        </Link>
+        <Link to={`/MainPage/${catagory[4]?.id }`}>
 
           <div className={classes.card}>
             <img className={classes.cardImg} src={NewArrivals} alt="card-img" />
-            <p className={classes.cardText}>New Arrivals </p>
+            <p className={classes.cardText}>{catagory[4]?.title} </p>
           </div>
-
+        </Link>
+        <Link to={`/MainPage/${catagory[5]?.id }`}>
           <div className={classes.card}>
             <img className={classes.cardImg} src={PetFriendlyPlants} alt="card-img" />
-            <p className={classes.cardText}>Pet-Friendly Plants  </p>
+            <p className={classes.cardText}>{catagory[5]?.title} </p>
           </div>
-
+        </Link>
         </div>
       </div>:<News/>
       }

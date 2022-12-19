@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import c from "./MobileMainCatalog.module.css";
 import Post from "./components/Post";
 import imgIndoor from "./images/Indoor_plants.svg";
@@ -8,37 +8,62 @@ import imgNewArrivals from "./images/New_Arrivals.svg";
 import imgGifts from "./images/Gifts.svg";
 import imgPetFriendly from "./images/Pet_Friendly_plants.svg";
 
-import {Link, NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getinfoAction } from "../../../redux/actions/catalogActions";
 
 
 
 
 const MobileMainCatalog = () => {
+  const dispatch = useDispatch()
+  
+  useEffect(()=>{
+    dispatch(getinfoAction())
+  },[])
+  
+
+  const {catagory}=useSelector(state=>state.catalogReducer)
   return(
-    <div>
+    <div style={{background:'#F6F0F0'}}>
       <div className={c.posts}>
         
         <div className={c.posts__item}>
-          <NavLink 
-          to="/MainPage/IndoorPage" className={c.navLink}>
-            <Post caption='Indoor Plants' image={imgIndoor}/>
-          </NavLink>
+          <Link to={`/MainPage/${catagory[0]?.id }`} className={c.navLink}>
+            <Post caption={catagory[0]?.title} image={imgIndoor}/>
+          </Link>
         </div>
-        <div className={c.posts__item}>
-          <Post caption='Outdoor Plants' image={imgOutdoor}/>
-        </div>
-        <div className={c.posts__item}>
-          <Post caption='Low-Maintenance' image={imgLowMaintenance}/>
-        </div>
-        <div className={c.posts__item}>
-          <Post caption='New Arrivals' image={imgNewArrivals}/>
-        </div>
-        <div className={c.posts__item}>
-          <Post caption='Gifts' image={imgGifts}/>
-        </div>
-        <div className={c.posts__item}>
-          <Post caption='Pet-Friendly Plants' image={imgPetFriendly}/>
-        </div>
+
+        <Link to={`/MainPage/${catagory[1]?.id }`} className={c.navLink}>
+          <div className={c.posts__item}>
+            <Post caption={catagory[1]?.title} image={imgOutdoor}/>
+          </div>
+        </Link>
+
+        <Link to={`/MainPage/${catagory[2]?.id }`} className={c.navLink}>
+          <div className={c.posts__item}>
+            <Post caption={catagory[2]?.title} image={imgLowMaintenance}/>
+          </div>
+        </Link>
+
+        <Link to={`/MainPage/${catagory[3]?.id }`} className={c.navLink}>
+          <div className={c.posts__item}>
+            <Post caption={catagory[3]?.title.slice(0,16)} image={imgNewArrivals}/>
+          </div>
+        </Link>
+
+        <Link to={`/MainPage/${catagory[4]?.id }`} className={c.navLink}>
+          <div className={c.posts__item}>
+            <Post caption={catagory[4]?.title} image={imgGifts}/>
+          </div>
+        </Link>
+
+        <Link to={`/MainPage/${catagory[5]?.id }`} className={c.navLink}> 
+          <div className={c.posts__item}>
+            <Post caption={catagory[5]?.title} image={imgPetFriendly}/>
+          </div>
+        </Link>
+
       </div>
     </div>
   )

@@ -1,0 +1,70 @@
+.purchase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6F0F0;
+    font-family: sans-serif;
+}
+.purchase_title {
+    color: #0C3010;
+    font-size: 24px;
+    margin-bottom: 56px;
+    margin-top: 36px;
+    text-align: center;
+
+}
+.purchase_inputs{
+    font-size: 13px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: start;
+}
+.purchase_input{
+    width: 271px;
+    height: 46px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    border: black;
+    text-align: start;
+}
+.button {
+    width: 169px;
+    height: 60px;
+    background-color: #0C3010; /* Green */
+    border: none;
+    color: #EEDEDE;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 38px;
+
+
+}
+.purchase_btn {
+    display: flex;
+    justify-content: center;
+}
+.proceed_image{
+    background-image: url("imgPurchase/flower_proceed.png");
+    width: 82px;
+    height: 113px;
+    background-repeat: no-repeat;
+    margin-top: 44px;
+}
+.proceed_image2{
+    background-image: url("./imgPurchase/image 61.png") ;
+    width: 113px;
+    height: 113px;
+    float: right;
+
+    background-repeat: no-repeat;
+    background-position: right ;
+
+}
+

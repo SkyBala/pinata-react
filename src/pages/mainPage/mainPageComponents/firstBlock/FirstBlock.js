@@ -3,7 +3,7 @@ import classes from './FirstBlock.module.css'
 
 function FirstBlock() {
   return (
-    <div className={classes.FirstBlock}>
+    <div className={classes.FirstBlock} >
         <div className={classes.container}>
              <h1 className={classes.h2Node}>
                  Plants made easy
@@ -18,7 +18,7 @@ function FirstBlock() {
                 <h2 className={classes.h3Node}>Pianta</h2>
 
                 <p className={classes.pMNode}>Giant Arborvitae and loved the price <br/> compared to all theGiant Arborvitae and love </p></div>
-            <div className={classes.buttonPos}> <button className={classes.button}>Shop now</button></div>
+           <a href="#sliderr"> <div className={classes.buttonPos}> <button className={classes.button}>Shop now</button></div></a>
         </div>
     </div>
   )

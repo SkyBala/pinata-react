@@ -3,15 +3,17 @@ import classes from './AboutUs.module.css'
 // import {Link} from 'react-router-dom'
 import bigimg from "./imgAboutUs/plash.png"
 import arrowLe from "./imgAboutUs/arrowLeft_icon.svg"
+import { Link } from 'react-router-dom'
 
 
 function AboutUs() {
   return (
     <div className={classes.AboutUs}>
       <div className={classes.AboutUsModal}>
-        <button className={classes.arrowButton}>
+        <Link className={classes.arrowButton} to={-1}>
           <img src={arrowLe} alt="back"/>
-        </button>
+          </Link>
+       
         <p className={classes.pageNameText}>About Us</p>
       </div>
       <div className={classes.AboutUsImg}>

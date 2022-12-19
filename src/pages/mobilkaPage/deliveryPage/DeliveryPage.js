@@ -11,7 +11,7 @@ function DeliveryPage() {
   return (
     <>
       <div className={classes.backl}>
-      <Link className={classes.ArrowBackIcon} href=""><ArrowBackIcon/>  Delivery</Link>
+      <Link className={classes.ArrowBackIcon} to={-1}><ArrowBackIcon/>  Delivery</Link>
       </div>
       <div><img className={classes.img} src={img} alt="" /></div>
       <section1  className={classes.section}>
