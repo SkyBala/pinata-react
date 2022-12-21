@@ -75,7 +75,7 @@ function FormLog() {
           </div>
           <div className={classes.LogIn}>
             <div className={classes.LogInInner}>
-              <Link to='signUp'>
+              <Link to='/signUp'>
                 <h2>Sign up</h2>{" "}
               </Link>
               <p>or</p>
