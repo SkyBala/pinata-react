@@ -10,13 +10,14 @@ import goOut from "./imgProfilePage/goOut_icon.svg"
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux'
 import { logOutAction } from '../../../redux/actions/regisReduserAction'
-import { getCookie } from '../../../components/ourCookies/OurCookies'
+import { getCookie, setCookie } from '../../../components/ourCookies/OurCookies'
 
 
 function ProfilePage() {
   const dispatch = useDispatch()
   const handleLogOut=()=>{
     dispatch(logOutAction())
+    setCookie('userInfo',JSON.stringify({}))
   }
   const user = JSON.parse(getCookie('userInfo')).user
   return (
