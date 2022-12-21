@@ -11,6 +11,7 @@ export const getinfoAction=()=>{
             dispatch(getChangeDis(data))
             dispatch(loadOffAction())
         }catch (e){
+            // dispatch(loadOffAction())
             console.log(e)
         }
     }
@@ -31,7 +32,7 @@ export const getPageAction=(param)=>{
             dispatch(getChangePageDis(data))
             dispatch(loadOffAction())
         }catch (e){
-            dispatch(loadOffAction())
+            // dispatch(loadOffAction())
             console.log(e)
         }
     }

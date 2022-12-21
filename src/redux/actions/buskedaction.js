@@ -141,8 +141,10 @@ export const cardOrderAct=()=>{
                     'Authorization':`Bearer ${JSON.parse(getCookie('token')).tokens.access}`
                 },
                 data:JSON.stringify(obj)
+            
             })
              await response.data
+             alert('sended')
         }catch(e){
             alert(e)
         }

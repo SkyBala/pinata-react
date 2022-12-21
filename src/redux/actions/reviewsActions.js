@@ -11,6 +11,7 @@ export const getReviews=()=>{
             dispatch(changeReviews(data))
             dispatch(loadOffAction())
         }catch (e){
+            // dispatch(loadOffAction())
             alert(e)
         }
     }

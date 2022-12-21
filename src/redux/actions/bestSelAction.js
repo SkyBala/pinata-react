@@ -11,7 +11,7 @@ export const getBestSelAction=(dispatch)=>{
         dispatch(changeBestSel(data))
         dispatch(loadOffAction())
      }catch (e){
-        dispatch(loadOffAction())
+        // dispatch(loadOffAction())
         alert(e) 
      }
     }
