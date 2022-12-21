@@ -7,7 +7,7 @@ import basket from "./imgMobileHeader/basket.svg";
 import profile from "./imgMobileHeader/profile.svg";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { openCloseAction } from "../../redux/actions/compActions";
+import { closeModalAction, openCloseAction } from "../../redux/actions/compActions";
 
 
 
@@ -16,13 +16,14 @@ function MobileHeader() {
     const dispatch = useDispatch()
 
     const handleOpen = () => dispatch(openCloseAction());
-
+    const handleClose = () => dispatch(closeModalAction())
+    
     return (
         <div style={{color:'white'}} className={classes.mobileHeader}>
             <div className={classes.container}>
                 <div className={classes.mobileHeader_inner}>
                     <div className={classes.home}>
-                        <Link to='MainPage'>
+                        <Link onClick={handleClose} to='MainPage'>
                             <img src={home} alt="home"/>
                             <p className={classes.text}>Home</p>
                         </Link>
@@ -34,19 +35,19 @@ function MobileHeader() {
                         </Link>
                     </div>
                     <div className={classes.us}>
-                        <Link to=''>
+                        <Link onClick={handleClose} to='aboutUsNav'>
                             <img src={us} alt="us"/>
                             <p className={classes.text}>Us</p>
                         </Link>
                     </div>
                     <div className={classes.basket}>
-                        <Link to=''>
+                        <Link onClick={handleClose}  to='basket'>
                             <img src={basket} alt="basket"/>
                             <p className={classes.text}>Basket</p>
                         </Link>
                     </div>
                     <div className={classes.profile}>
-                        <Link to=''>
+                        <Link onClick={handleClose} to='profil'>
                             <img src={profile} alt="profile"/>
                             <p className={classes.text}>Profile</p>
                         </Link>

@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
-import MobileHeader from "./components/footer/MobileHeader";
-import Poisk from "./components/poisk/Poisk";
+import MobileHeader from "../footer/MobileHeader";
+import Poisk from "../poisk/Poisk";
 
 
 function Main() {

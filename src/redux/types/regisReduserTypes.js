@@ -1,4 +1,5 @@
 export const RegisTypes={
     SENDED:'SENDED',
-    LOGIN:'LOGIN'
+    LOGIN:'LOGIN',
+    LOGOUT:'LOGOUT'
 }

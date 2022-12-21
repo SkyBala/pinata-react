@@ -8,11 +8,10 @@ import { Link,  useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useRef } from "react";
 import { LogAction } from "../../../redux/actions/regisReduserAction";
-import { getCookie } from "react-use-cookie";
+import { setCookie } from "../../../components/ourCookies/OurCookies";
+
 function FormLog() {
   const navigate = useNavigate()
-  const user = JSON.parse(getCookie('user'))
-
   const form = useRef()
   const dispatch=useDispatch()
   const {logIn}=useSelector(state=>state.regisReduserAction)
@@ -23,17 +22,14 @@ function FormLog() {
       formData.forEach((item,id)=>{
         obj[id]=item
       })
-    if(obj.email === user.email && obj.password === user.password){
        dispatch(LogAction(JSON.stringify(obj)))
-       setTimeout(()=>{
-        if(logIn===true){
-          navigate('/MainPage')
-         }
-       },3000)
-    }else{
-        alert('Не правильный логин либо пароль')
-    }
-    
+  }
+
+  if(logIn===true){
+    setTimeout(()=>{
+       navigate('/MainPage')
+       setCookie('card',JSON.stringify([]))
+     },1500)
   }
 
   return (
@@ -48,7 +44,7 @@ function FormLog() {
         <div className={classes.forma}>
           <div className={classes.inner_form}>
             <form action="URL" ref={form}>
-              <h1>Log in</h1>
+               {logIn!==false?<h1  style={{color:'green',textAlign:'center'}}>you log in</h1>:<h1>Log in</h1>}
               <div className={classes.input_win}>
                 <h4>EMAIL ADDRESS</h4>
                 <input 
@@ -72,7 +68,9 @@ function FormLog() {
                 
               }} className={classes.button}>
                 <p> Log in </p>
+              
               </button>
+             
             </div>
           </div>
           <div className={classes.LogIn}>

@@ -1,9 +1,27 @@
 import { Box } from '@mui/system';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button  from '@mui/material/Button';
 import Xray from "../img/x.svg";
+import ModalCard from './ModalCard';
+import { getCookie, setCookie } from '../../../../components/ourCookies/OurCookies';
+import { useDispatch } from 'react-redux';
+import { cardDeleteApi, cardGetApi } from '../../../../redux/actions/buskedaction';
+import { Link } from 'react-router-dom';
+
 
  function BuskedModal ({closeModal}) {
+    const dispatch = useDispatch()
+    useEffect(()=>{
+        dispatch(cardGetApi())
+      },[])
+      const [card,setCard]=useState(JSON.parse(getCookie('card')))
+      const [basket,setBasket] = useState(JSON.parse(getCookie('userBasket')))
+
+      const handleDelete=()=>{
+          setCookie('card',JSON.stringify([]))
+          setCard([])
+          dispatch(cardDeleteApi(basket?.items?.[0].flower_id,basket?.id))
+      }
 
   return (
     <Box 
@@ -36,11 +54,10 @@ import Xray from "../img/x.svg";
             
                     }}>
             <span onClick={() => {closeModal(false)}}><img src={Xray} alt ="" ></img></span>
-            <h1>Your Cart </h1>
+            <h1>Your Cart</h1>
             <center>
       <Box 
       sx= {{
-       
         height:"2px",
         background:"darkGreen",
         width:"400px",
@@ -55,8 +72,9 @@ import Xray from "../img/x.svg";
 
 {/* box for cards */}
         <Box>
-
+        {card && card?.length===0?<h1>No card</h1>:card?.map(item=><ModalCard key={item.id} item={item}/>)}
         </Box>
+     
 {/* ennd box for cards */}
 
             {/* bottom box */}
@@ -85,6 +103,7 @@ import Xray from "../img/x.svg";
                     color: "#EEDEDE",
                 }
             }}>
+        
             <center>
                 <Box 
                     sx= {{
@@ -105,8 +124,9 @@ import Xray from "../img/x.svg";
             }}>
                 <span>
                 <p>Subtotal: </p>
-                <p> $300</p>
+                <p> {basket?.total_price}$</p>
                 </span>
+                <Link to='/purchase'>
                 <Button variant="contained"  color="success"
                     sx ={{
                       background:"#0C3010",
@@ -114,6 +134,15 @@ import Xray from "../img/x.svg";
                       width: '313px',
                       height: '44px',
                     }} >CHECKOUT </Button>
+                </Link>
+                {card?.length!==0? <Button variant="contained"  color="success"
+        onClick={handleDelete}
+                    sx ={{
+                      background:"#0C3010",
+                      borderRadius: "30px",
+                      width: '313px',
+                      height: '44px',
+                    }} >delete All </Button>:null}
             </Box>
             
             </Box>

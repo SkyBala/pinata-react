@@ -53,6 +53,9 @@ form h1 {
   margin-top: 35px;
   border: none;
 }
+.button:disabled{
+  cursor:not-allowed;
+}
 .button  {
   /* font-family: "Titillium Web"; */
   font-style: normal;

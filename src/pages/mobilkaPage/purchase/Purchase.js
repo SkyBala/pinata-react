@@ -1,30 +1,18 @@
 import React, {useState} from 'react'
 import classes from './Purchase.module.css'
 import axios from  "axios"
-
+import arrow from './imgPurchase/arrow-left.svg'
+import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { cardOrderAct } from '../../../redux/actions/buskedaction'
 function Purchase() {
     const [postEmail, setPostEmail] = useState('')
     const [postNumber, setPostNumber] = useState('')
     const [postPassword, setPostPassword] = useState('')
     const [check,setCheck]=useState('')
-
-
-    
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        try {
-            const resp = await axios.post('server.php', {postEmail,postNumber,postPassword})
-            if(resp.status===200 || resp.status >200 && resp.status<400){
-                alert('good')
-                setCheck(true)
-            }
-            
-        } catch (error) {
-            console.log(error)
-            setCheck(false)
-
-        }
+const dispatch= useDispatch()
+    const handleSubmit =()=>{
+        dispatch(cardOrderAct())
     }
 
   return (
@@ -32,8 +20,11 @@ function Purchase() {
     <div className={classes.purchase}>
 
       <div className="purchase">
+            <Link  to={-1}>
+                <img style={{marginTop:'10px'}} src={arrow} alt="" />
+            </Link>
           <h2 className={classes.purchase_title}>Purchase</h2>
-          <div onSubmit={handleSubmit} className={classes.purchase_inputs}>
+          <div  className={classes.purchase_inputs}>
               <div className={classes.purchase_email_address}>
                   <p>EMAIL ADDRESS</p>
                   <input

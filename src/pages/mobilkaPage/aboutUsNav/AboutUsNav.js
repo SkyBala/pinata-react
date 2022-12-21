@@ -3,15 +3,16 @@ import classes from './AboutUsNav.module.css'
 import delivery from "./imgAboutUsNav/img1.png"
 import Flower from   "./imgAboutUsNav/img2.png"
 import Bottle from  "./imgAboutUsNav/img3.png"
-import Back from "@mui/icons-material/ArrowBack"
+import arrowLe from "./imgAboutUsNav/arrowLeft_icon.svg"
+import { Link } from 'react-router-dom'
 function AboutUsNav() {
   return (
     <div className={classes.AboutUsNav}>
         <div className={classes.container}>
-            <div className={classes.AboutUsTitle}><span className={classes.backButton}><img src={Back}/> </span><p className={classes.AboutTxt}>AboutUS</p></div>
+            <div className={classes.AboutUsTitle}><Link to={-1} className={classes.backButton}><img style={{marginLeft:'10px'}} src={arrowLe}/> </Link><p className={classes.AboutTxt}>AboutUS</p></div>
             <div className={classes.AboutUsBody}>
                 <div className={classes.delivery}>
-                    <div className={classes.BoxImg}>
+                    <Link to='/delivery' className={classes.BoxImg}>
                         <img src={delivery}/>
                         <div className={classes.blur}>
                             <div className={classes.text}>
@@ -19,10 +20,10 @@ function AboutUsNav() {
                                 <p>it to make a type specimen book. It hacdgvs fksmgpp[a...</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
-                <div className={classes.AboutUs}>
-                    <div className={classes.Flower}>
+                <div className={classes.delivery}>
+                    <Link to='/aboutUs' className={classes.Flower}>
                         <img src={Flower}/>
                         <div className={classes.blur}>
                             <div>
@@ -30,10 +31,10 @@ function AboutUsNav() {
                                 <p>it to make a type specimen book. It hacdgvs fksmgpp[a...</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
-                <div className={classes.Payment}>
-                    <div className={classes.Bottle}>
+                <div className={classes.delivery}>
+                    <Link to='/payment' className={classes.Bottle}>
                         <img src={Bottle}/>
                         <div className={classes.blur}>
                             <div>
@@ -41,7 +42,7 @@ function AboutUsNav() {
                                 <p>it to make a type specimen book. It hacdgvs fksmgpp[a...</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -1,0 +1,13 @@
+.pNode{
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 45px;
+    /* identical to box height, or 281% */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}

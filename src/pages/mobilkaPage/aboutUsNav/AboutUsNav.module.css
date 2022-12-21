@@ -1,62 +1,76 @@
-
 .AboutUsBody {
-    display:inline-block;
-    position: absolute;
-    left: 10px;
-    width: 360px;
+  /* display: inline-block; */
+  /* position: absolute; */
+  /* left: 10px; */
+  /* width: 360px; */
+  background: #F6F0F0;
+  padding: 0 0 120px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+p{
+  margin: 0;
+}
 .AboutUsTitle {
-    width: 100%;
-    height: 45px;
-    background-color: #c7cac3;
-   display: flex;
-    align-items: center;
-    text-align:center ;
-    border-radius: 0 0 10px 10px;
+  width: 100%;
+  height: 45px;
+  background-color: #c7cac3;
+  display: flex;
+  align-items: center;
+  /* text-align: center; */
+  border-radius: 0 0 10px 10px;
 
 }
 .delivery {
-    width: 340px;
-    height: 204px;
-    margin-top: 46px;
-    border-radius: 5px;
+  width: 340px;
+  /* height: 204px; */
+  margin-top: 46px;
+  border-radius: 5px;
 }
-
 
 .AboutUs {
-    width: 340px;
-    height: 204px;
-    margin-top: 100px;
-    border-radius: 5px;
+  width: 340px;
+  height: 204px;
+  margin-top: 100px;
+  border-radius: 5px;
 }
 
-.Bottle{
-    width: 340px;
-    height: 204px;
-    margin-top: 100px;
-    border-radius: 5px;
+.Bottle {
+  width: 340px;
+  height: 204px;
+  margin-top: 100px;
+  border-radius: 5px;
 }
 
-.blur{
-    padding: 0;
-    width: 339px;
-    height: 74px;
-    background: rgba(12, 48, 16, 0.2);
-    backdrop-filter: blur(3.5px);
-    border-radius: 0 0 5px 5px;
-    z-index: 1;
-    margin-top: -30px;
-    margin-left:1px;
+.blur {
+  padding: 0;
+  width: 339px;
+  height: 74px;
+  background: rgba(12, 48, 16, 0.2);
+  backdrop-filter: blur(3.5px);
+  border-radius: 0 0 5px 5px;
+  z-index: 1;
+  margin-top: -30px;
+  margin-left: 1px;
 }
 
-.backButton{
-    display: flex;
-    justify-content: flex-start;
+.backButton {
+  display: flex;
+  justify-content: flex-start;
 }
-.AboutTxt{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.AboutTxt {
+  width: 100%;
+  display: flex;
+  margin-left: 10px;
+}
+.AboutUsBody p {
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #0c3010;
 }

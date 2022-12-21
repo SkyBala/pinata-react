@@ -11,24 +11,27 @@ import { useMediaQuery } from '@mui/material'
 import News from '../mobileCatalog/news/News'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import { getinfoAction } from '../../../redux/actions/catalogActions'
+import { getinfoAction, getPageAction } from '../../../redux/actions/catalogActions'
+import LoadPage from '../../../components/loadPage/LoadPage'
 
 
 
 
 
 function MainCatalog() {
-  const isMobile = useMediaQuery('(min-width:420px)');
+  const isMobile = useMediaQuery('(min-width:450px)');
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(getinfoAction())
+    dispatch(getPageAction(2))
   },[])
   const {catagory}=useSelector(state=>state.catalogReducer)
-
+  const {preload} =useSelector(state=>state.compReducer)
+  
   return (
       <>
       {
-        isMobile?
+        preload?<LoadPage/>:isMobile?
         <div  className={classes.mainCatalog}>
         <h1 className={classes.title}>Catalog</h1>
         <div className={classes.cardsBox}>

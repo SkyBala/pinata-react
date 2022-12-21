@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route,Routes, } from 'react-router-dom';
-import Main from './Main';
+import Main from './components/layouts/LayoutMobHead';
 
 import FormLog from './pages/formPages/formLog/FormLog';
 import FormSignUp from './pages/formPages/formSignUp/FormSignUp';
@@ -21,23 +21,20 @@ import Proceed from './pages/mobilkaPage/proceed/Proceed';
 import ProfilePage from './pages/mobilkaPage/profilePage/ProfilePage';
 import Purchase from './pages/mobilkaPage/purchase/Purchase';
 import MobileCatalog from './pages/catologPages/mobileCatalog/MobileCatalog';
-import MobileMainCatalog from './pages/catologPages/mobileMainCatalog/MobileMainCatalog';
 
-import LoadPage from './pages/mobilkaPage/loadPage/LoadPage';
+
 import BaskedPage from './pages/busketPage/BuskedDekstop/BaskedPage';
+import BuskedMobile from './pages/busketPage/BuskedMobile/BuskedMobile';
+import MainPageBasket from './pages/busketPage/MainPageBasket';
+
 
 
 function App() {
-
-  const isMobile = useMediaQuery('(min-width:420px)');
-
-  
+  const isMobile = useMediaQuery('(min-width:450px)');
 
 
   return (
-    <div className="App">
-      
-        
+    <div style={{background:'#F6F0F0'}} className="App">
         <Routes>
             {
               isMobile
@@ -51,15 +48,15 @@ function App() {
 
                 <Route path='aboutUsNav' element={<AboutUsNav/>}/>
                 <Route path='aboutUs' element={<AboutUs/>}/>
-                
+              
                 <Route path='paymentPage' element={<PaymentPage/>}/>
                 <Route path='proceed' element={<Proceed/>}/>
                 <Route path='profil' element={<ProfilePage/>}/>
                 <Route path='purchase' element={<Purchase/>}/>
                 <Route path='delivery' element={<DeliveryPage/>}/>
                 <Route path='MainPage/:id' element={<IndoorPage/>}/>
-                <Route path='Indoor/:id' element={<LoadPage/>}/>
-                <Route path='baskedPage' element={<BaskedPage/>}/>
+                <Route path='Indoor/:id' element={<BaskedPage/>}/>
+                <Route path='basket' element={<MainPageBasket/>}/>
 
             </Route>
             :
@@ -70,23 +67,22 @@ function App() {
                 <Route path='signUp' element={<FormSignUp/>}/>
                 <Route path='proceed' element={<Proceed/>}/>
                 <Route path='purchase' element={<Purchase/>}/>
+
                <Route path='/' element={<Main/>}>
+
+                <Route path='basket' element={<MainPageBasket/>}/>
                   <Route path='MainPage' element={<MainPage/>}/>
                   <Route path='aboutUsNav' element={<AboutUsNav/>}/>
                   <Route path='aboutUs' element={<AboutUs/>}/>
                   <Route path='delivery' element={<DeliveryPage/>}/>
-                  <Route path='paymentPage' element={<PaymentPage/>}/>
+                  <Route path='payment' element={<PaymentPage/>}/>
                   <Route path='profil' element={<ProfilePage/>}/>
                   <Route path='MainPage/:id' element={<MobileCatalog/>}/>
-                  <Route path='Indoor/:id' element={<LoadPage/>}/>
-                  <Route path='MainPage/catalog' element={<MobileMainCatalog/>}/>
+                  <Route path='Indoor/:id' element={<BuskedMobile/>}/> 
 
                </Route>
             </Route>
             }
-            
-
-
           </Routes>
        
     </div>

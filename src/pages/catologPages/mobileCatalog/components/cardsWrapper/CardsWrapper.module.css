@@ -8,20 +8,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 33px 20px 30%;
+    padding: 33px 10px 30%;
     margin-right: auto;
+    height: 100vh;
 }
 .card{
-    flex: 0 1 160px;
+    /* flex: 0 1 160px;
+    max-width: 45%; */
     position: relative;
-    max-width: 45%;
+    width: 160px;
 }
 .card:not(:nth-of-type(-n+2)){
     margin-top: 50px;
 }
 .card__inner{
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     background-color: #D9D9D9;
     border-radius: 10px;
 }
@@ -29,11 +31,25 @@
     border-radius: 10px 10px 0 0;
     width: 100%;
     height: 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .card__favorite{
     position: absolute;
+    background: url('../../imgMobileCatalog/favorite.svg') no-repeat center/cover;
     top: 6px;
     right: 8px;
+    width: 20px;
+    height: 25px;
+}
+.card__fav{
+    position: absolute;
+    background: url('../../imgMobileCatalog/fav2.svg') no-repeat center/cover;
+    top: 6px;
+    right: 8px;
+    width: 20px;
+    height: 25px;
 }
 .card__options{
     max-height: 55px;

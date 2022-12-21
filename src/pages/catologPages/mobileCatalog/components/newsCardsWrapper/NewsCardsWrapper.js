@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import c from './NewsCardsWrapper.module.css'
 import Card from "./card/Card";
 import image1 from "../../imgMobileCatalog/newsCardsImg/Pet-Friendly-Plants.svg";
@@ -7,14 +7,18 @@ import image2 from "../../imgMobileCatalog/newsCardsImg/Low-Maintenance-Plants.j
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { useDispatch, useSelector } from "react-redux";
+import { getPageAction } from "../../../../../redux/actions/catalogActions";
+
 
 
 
 const NewsCardsWrapper = () => {
+ 
+const {page}=useSelector(state=>state.catalogReducer)
 
   return(
     <div className={c.cards}>
-
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={0}
@@ -22,19 +26,19 @@ const NewsCardsWrapper = () => {
         loop={true}
         loopFillGroupWithBlank={true}
         >
-
-        <SwiperSlide>
-          <Card image={image1} className={c.card1}/>
+        {page?.map(item=><SwiperSlide key={item.id}>
+          <Card
+             id={item.id}
+             image={item?.photos[1]}
+             colors={item?.colors} 
+             price={item?.price}
+             size={item?.description}
+             name={item?.title}
+            className={c.card2}/>
+              
         </SwiperSlide>
-        <SwiperSlide>
-          <Card image={image2} className={c.card2}/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card image={image1} className={c.card2}/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card image={image2} className={c.card2}/>
-        </SwiperSlide>
+        )}
+      
       </Swiper>
       
     </div>

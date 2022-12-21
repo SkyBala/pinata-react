@@ -22,12 +22,13 @@ const MobileMainCatalog = () => {
   useEffect(()=>{
     dispatch(getinfoAction())
   },[])
+
   const handleClose = () => dispatch(closeModalAction())
-
-
+  
   const {catagory}=useSelector(state=>state.catalogReducer)
+  
   return(
-    <div style={{background:'#F6F0F0'}}>
+    <div style={{background:'#F6F0F0',height:'100vh'}}>
       <div className={c.posts}>
         
         <div className={c.posts__item}>

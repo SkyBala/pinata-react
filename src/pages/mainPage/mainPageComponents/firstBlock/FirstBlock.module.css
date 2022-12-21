@@ -54,7 +54,7 @@
 .pMNode{
     display: none;
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .FirstBlock{
         height: 488px;
         padding-top: 37px;

@@ -36,7 +36,7 @@
 .pNode2{
     display: none;
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .SaleBlock{
         height: 220px;
         background: url("./imgSaleBLock/mobilkaSale.jpg") no-repeat center;

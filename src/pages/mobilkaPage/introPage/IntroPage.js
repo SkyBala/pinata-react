@@ -28,7 +28,7 @@ function IntroPage() {
           </div>
           <div className={classes.bottom}>
            <Link to='signUp'>
-           <button  className={classes.btn}>
+           <button className={classes.btn}>
               Sign up
             </button>
            </Link>

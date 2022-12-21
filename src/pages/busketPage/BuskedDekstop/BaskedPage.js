@@ -1,24 +1,31 @@
-import React, { useState }  from 'react'
+import React, { useEffect, useState }  from 'react'
 import {Box} from "@mui/material"
 import Bimg from "./img/Bimg.png"
 import styles from "./BaskedPage.module.css"
 import Button from "@mui/material/Button"
+import { busketTypes } from '../../../redux/types/busketTypes'
 import { useDispatch, useSelector } from "react-redux"
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import BuskedModal from './buskedModal/BuskedModal';
-import { busketTypes } from '../../../redux/types/busketTypes'
+import { useParams } from 'react-router-dom'
+import { cardAddApi, closeBasketAction, getInfoAction } from '../../../redux/actions/buskedaction'
+import { useRef } from 'react'
+import { getCookie, setCookie } from '../../../components/ourCookies/OurCookies'
 
 
 function BaskedPage() {
 
-
+  const {id}=useParams()
   const count = useSelector(state => state.buskedReducer.count)
+  
   const dispatch = useDispatch();
-
   const [modal,setModal] = useState(false)
-
+  useEffect(()=>{
+    dispatch(getInfoAction(id))
+  },[id])
+  const {info}=  useSelector(state=>state.buskedReducer)
 
 
 const BuskedInc =() => {
@@ -34,18 +41,34 @@ const BuskedDec =() => {
 }
 
 // for aut
-const [age, setAge] = React.useState("");
-
-const handleChange = (event) => {
-  setAge(event.target.value);
+const [size, setSize] = React.useState("");
+const [description, setDescription] = React.useState("");
+const firstChange = (event) => {
+  setSize(event.target.value);
 };
+const secondChange = (event) => {
+  setDescription(event.target.value);
+};
+const [activeF,setActiveF]=useState(false)
 
+
+const now = useRef()
+const handleChangeFoto=(e)=>{
+    now.current.src= e.target.src
+    console.log(e.target.src);
+}
+
+const card = JSON.parse(getCookie('card'))
+const handleAddCard =()=>{
+  dispatch(closeBasketAction())
+  let item = info
+  dispatch(cardAddApi(item.id,count))
+  setCookie('card',JSON.stringify([...card,item]))
+}
 
   return (
     <Box sx={{
       backgroundColor:"#F6F0F0",
-     height:"100vh",
-     width:"100vw",
     }}>
       <Box sx={{
         display:'flex',
@@ -64,8 +87,12 @@ const handleChange = (event) => {
           <Box sx={{
             width: '555px',
             height: '620px',
+            "& img":{
+              width: '555px',
+              height: '620px',
+            }
           }}>
-            <img src={Bimg} alt=""/>
+            <img ref={now} src={info?.photos?.[0]} alt=""/>
           </Box>
           <Box 
           sx={{
@@ -74,11 +101,18 @@ const handleChange = (event) => {
             width: '555px',
             justifyContent:"space-between",
             paddingTop:"15px",
+            "& div":{
+              "& img":{
+                width: "100px",
+                height: "100px",
+                cursor:'pointer'
+              }
+            }
           }}>
-            <div className={styles.BusketFourBlock}></div>
-            <div className={styles.BusketFourBlock} ></div>
-            <div className={styles.BusketFourBlock}></div>
-            <div className={styles.BusketFourBlock}></div>
+            <div><img onClick={handleChangeFoto}  src={info?.photos?.[0] } alt=""/></div>
+            <div><img  onClick={handleChangeFoto}  src={info?.photos?.[2]} alt=""/></div>
+            <div><img onClick={handleChangeFoto} src={info?.photos?.[3]} alt=""/></div>
+            <div><img onClick={handleChangeFoto} src={info?.photos?.[4]} alt=""/></div>
           </Box>
         </Box>
         {/* end Main Foto */}
@@ -99,8 +133,8 @@ const handleChange = (event) => {
           
           }}>
             <span className={styles.topDouble}>
-              <p  className={styles.BusketText}>Photos Collection</p>
-              <p className={styles.BusketText}>$150 </p>
+              <p  className={styles.BusketText}>{info?.title}</p>
+              <p className={styles.BusketText}>${info?.price}</p>
             </span>
               <span className={styles.BusketTxt}>
               Fun and lively collection of three trailing photos plants in clay pots
@@ -125,34 +159,25 @@ const handleChange = (event) => {
            flexDirection:"row",
            alignItems:"center",
            width:"80%",
-           justifyContent:"space-around",
-          
+          "& span":{
+            marginRight:"20px"
+          }
           }}>
-            <span className={styles.BusketTxt}>
+            <span  className={styles.BusketTxt}>
               Choose color 
             </span>
             <Box sx= {{
-              width: "110px",
+              width: "195px",
               display:"flex",
-              justifyContent:"space-around",
               alignContent:"center",
+              justifyContent:'space-between'
             }}>
-              <button  className={styles.TripleButton}>
-                
-              </button>
-              <button className={styles.TripleButton}>
-                
-              </button>
-              <button  className={styles.TripleButton}>
-              </button>
+              {info?.colors?.map(item=><button  key={item.id} style={{background:item.title}} className={styles.TripleButton}> </button>)}
             </Box>
           </Box>
       
       <Box sx= {{
            display: "flex",
-         
-          
-        
       }}>
             <Box sx={{
               width:"140px",
@@ -164,14 +189,17 @@ const handleChange = (event) => {
               justifyContent:"space-between",
               marginRight:"29px",
               alignItems:"center",
+              textAlign:"center",
               "& button":{
                 height:"42px",
                 width:"50px",
                 border:"none",
                 backgroundColor:"#F6F0F0",
               },
-              
-            
+              "& h1":{
+                margin:"0",
+              }
+ 
             }}>
                 <button
                   style={{
@@ -199,7 +227,10 @@ const handleChange = (event) => {
                       width: '313px',
                       height: '44px',
                     }}className={styles.BusketTxt} 
-                    onClick={() => {setModal(true)}}>ADD TO CARD</Button>
+                    onClick={() => {
+                      setModal(true)
+                      handleAddCard()
+                      }}>ADD TO CARD</Button>
       
       </Box>
    
@@ -231,28 +262,26 @@ const handleChange = (event) => {
             ".MuiOutlinedInput-input":{
                 padding:"0px",
                 color:"#02780F",
-                
                 fontStyle: 'normal',
                 fontWeight: '400',
                 fontSize: '14px',
                 lineHeight: '18px',
             }
           }}
-          value={age}
-          onChange={handleChange}
+          value={size}
+          onChange={firstChange}
           displayEmpty
           inputProps={{ "aria-label": "Without label" }}
           color="success"
           variant="standard"
         >
           <MenuItem value="" color="success">
-            default
+          Details and Care 
           </MenuItem>
           <MenuItem value={1} color="success">
-            Ten
+            {info?.size}
           </MenuItem>
-          <MenuItem value={2}>Twenty</MenuItem>
-          <MenuItem value={3}>Thirty</MenuItem>
+     
         </Select>
       </FormControl>
       <FormControl
@@ -274,21 +303,20 @@ const handleChange = (event) => {
                 lineHeight: '18px',
                 }
           }}
-          value={age}
-          onChange={handleChange}
+          value={description}
+          onChange={secondChange}
           displayEmpty
           inputProps={{ "aria-label": "Without label" }}
           color="success"
           variant="standard"
         >
           <MenuItem value="" color="success">
-            default
+          Description 
           </MenuItem>
           <MenuItem value={1} color="success">
-            Ten
+            {info?.description}
           </MenuItem>
-          <MenuItem value={2}>Twenty</MenuItem>
-          <MenuItem value={3}>Thirty</MenuItem>
+         
         </Select>
       </FormControl>
     </Box>
@@ -346,10 +374,10 @@ const handleChange = (event) => {
       {modal && <Box
       sx ={{
         position:"absolute",
-        top:"0%",left:'66.7%',
+        top:"109px",left:'67%',
         overflow:"hidden",
       }} >
-      <BuskedModal closeModal = {setModal}/>
+      <BuskedModal item={info} closeModal = {setModal}/>
       </Box>}
 
   </Box>

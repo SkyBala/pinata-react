@@ -8,15 +8,6 @@
 .TripleButton:focus{
     border: 3px solid darkgreen;
 }
-.TripleButton:nth-child(1){
-    background: #626161;
-}
-.TripleButton:nth-child(2){
-    background: #935A32;
-}
-.TripleButton:nth-child(3){
-    background: #FFFFFF;
-}
 .topDouble{
     display: flex;
     flex-direction: row;
@@ -25,7 +16,7 @@
 }
 .BusketTxt{
  
-font-style: normal;
+font-style: normal;             
 font-weight: 400;
 font-size: 16px;
 line-height: 24px;
@@ -40,11 +31,7 @@ color: #0C3010;
     line-height: 46px;
     color: #0C3010;
 }
-.BusketFourBlock{
-    width: 100px;
-    height: 100px;
-    background-color: #0C3010;
-}
+
 .BusketBottomTxt{
     
     font-style: normal;

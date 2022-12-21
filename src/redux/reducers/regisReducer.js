@@ -14,6 +14,8 @@ export const regisReduserAction=(state=initial,action)=>{
             case RegisTypes.LOGIN:
                 setCookie('token',JSON.stringify(action.payload))
                 return{...state,logIn:true}
+            case RegisTypes.LOGOUT:
+                return {...state,signIn:false,logIn:false}    
             default: return state
         }
 }

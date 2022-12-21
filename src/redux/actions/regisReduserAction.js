@@ -14,6 +14,7 @@ export const sendForm=(form)=>{
     formData.forEach((item,id)=>{
         obj[id]=item
     })
+
     return async(dispatch)=>{
         try{
             const response = axios({
@@ -25,13 +26,13 @@ export const sendForm=(form)=>{
             const data = await response
             if(data.status>=200 && data.status<400){
                 dispatch(sendFormDis(data.data))
-                setCookie('user',JSON.stringify(obj))
-                alert('Registered')
             }else{
-                throw Error
+                alert('try again')
+                throw Error('something is invalid')
+              
             }
         }catch(e){
-            alert('в не зарегестрированы,пробуйте еще раз')
+            alert(e)
         }
     }
 }
@@ -55,13 +56,17 @@ export const LogAction=(form)=>{
             })
             const data = await response
             if(data.status>=200 && data.status<400){
-                alert('Вы зашли')
-                dispatch(getToken(data.data))
-            }else{
-                throw Error
+                if(data.data.message==='Login Successfully'){
+                    dispatch(getToken(data.data))
+                }else{
+                    throw Error(data.data.message)
+                }
+            } else{
+                throw Error('error')
             }
+            
         }catch(e){
-            console.log(e)
+           alert(e)
         }
     }
 }
@@ -70,4 +75,9 @@ function getToken(token){
             type:RegisTypes.LOGIN,
             payload: token
         }
+}
+export const logOutAction=()=>{
+    return {
+        type:RegisTypes.LOGOUT
+    }
 }

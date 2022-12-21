@@ -1,21 +1,18 @@
 import React from "react";
 import c from './News.module.css';
 import NewsCardsWrapper from ".././components/newsCardsWrapper/NewsCardsWrapper";
-
-import {Link} from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { openCloseAction } from "../../../../redux/actions/compActions";
 
 
 const News = () => {
+  const dispatch = useDispatch()
+
+  const handleOpen = () => dispatch(openCloseAction());
   return(
     <div className={c.news}>
       <h1 className={c.news__title}>News and Promotions:</h1>
-      
-
-      <Link 
-      to="catalog" className={c.navLink}>
-        <span className={c.catalogs}>CATALOGS</span>
-      </Link>
-
+        <span onClick={handleOpen} className={c.catalogs}>CATALOGS</span>
       <NewsCardsWrapper/>
     </div>  
   )

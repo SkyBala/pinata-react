@@ -67,16 +67,20 @@ function FormSignUp() {
   const form = useRef()
   const dispatch = useDispatch()
   const navigate= useNavigate()
+
+
   const handleSend=()=>{
-        dispatch(sendForm(form.current))
-       setTimeout(()=>{
-        if(signIn===true){
-          navigate('/')
-        }
-       },5000)
-       
+      dispatch(sendForm(form.current))
+      
   }
-  
+  if(signIn===true){
+    setTimeout(()=>{
+      navigate('/')
+    },1500)   
+  }
+ 
+
+
   return (
     <div className={classes.formSignUpPage}>
       <div className={classes.aroowLeft}>
@@ -88,8 +92,10 @@ function FormSignUp() {
       <div className={classes.container}>
         <div className={classes.forma}>
           <div className={classes.inner_form}>
+          
             <form action="/logIn" ref={form} >
-              <h1>Sign Ap</h1>
+              
+              {signIn!==false?<h1  style={{color:'green',textAlign:'center'}}>You registered</h1>:<h1>Sign Ap</h1>}
               <div className={classes.input_win}>
                 <h4>EMAIL ADDRESS</h4>
                 {emailDirty && emailError && (
@@ -116,6 +122,7 @@ function FormSignUp() {
                 {passworDirty && passwordError && (
                   <div style={{ color: "red" }}>{passwordError}</div>
                 )}
+
                 <input
                   onChange={(e) => passwordHandler(e)}
                   onBlur={(e) => blurHandler(e)}
@@ -139,13 +146,13 @@ function FormSignUp() {
             <button onClick={handleSend} disabled={!formValid} className={classes.button} >
                 Sign Up
               </button>
-
             </div>
           </div>
+              
         </div>
       </div>
       <div className={classes.bottomText}>
-        <p>I already have an account.<Link to='/logIn'>Log in</Link></p>
+        <p>I already have an account.<Link  to='/logIn'>Log in</Link></p>
       </div>
       <div className={classes.imgForm}>
         <img src={imgLog} alt="imgForm" />
