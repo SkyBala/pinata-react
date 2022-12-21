@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import classes from './Purchase.module.css'
 import axios from  "axios"
 import arrow from './imgPurchase/arrow-left.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { cardOrderAct } from '../../../redux/actions/buskedaction'
 function Purchase() {
@@ -10,9 +10,11 @@ function Purchase() {
     const [postNumber, setPostNumber] = useState('')
     const [postPassword, setPostPassword] = useState('')
     const [check,setCheck]=useState('')
+    const navigate= useNavigate()
 const dispatch= useDispatch()
     const handleSubmit =()=>{
         dispatch(cardOrderAct())
+        navigate('/proceed')
     }
 
   return (
