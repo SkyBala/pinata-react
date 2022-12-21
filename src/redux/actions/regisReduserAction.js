@@ -19,7 +19,7 @@ export const sendForm=(form)=>{
         try{
             const response = axios({
                 method:'POST',
-                url:'https://164.92.190.147:8005/api/v1/users/signup/',
+                url:'http://164.92.190.147:8005/api/v1/users/signup/',
                 headers:{'Content-type':'application/json'},
                 data:JSON.stringify(obj)
             })
@@ -50,7 +50,7 @@ export const LogAction=(form)=>{
         try{
             const response = axios({
                 method:'POST',
-                url:'https://164.92.190.147:8005/api/v1/users/login/',
+                url:'http://164.92.190.147:8005/api/v1/users/login/',
                 headers:{'Content-type':'application/json'},
                 data:form
             })
